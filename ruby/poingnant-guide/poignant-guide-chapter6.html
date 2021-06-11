@@ -1,0 +1,2671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>
+      Downtown
+      ::
+      Why's (Poignant) Guide to Ruby
+    </title>
+    <meta name=author content="Why the Lucky Stiff">
+    <meta name=creator content="Mislav Marohnić">
+    
+    <link rel="stylesheet" type="text/css" href="../guide.css">
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+</head>
+<body class="">
+
+<div id="banner">
+   <div class="pager">
+     <a class="pagebar" href="chapter-5.html">previous</a> |
+     <a class="pagebar" href="chapter-7.html">next</a>
+   </div>
+   <div class="title">
+     <img src="../images/2006.chaptertitle.png" alt="Why's (Poignant) Guide to Ruby" />
+   </div>
+</div>
+
+<div id="container">
+  <div class="page">
+    <div class="pageLinks">
+      <a class="pagebar" href="./">Contents</a>
+    </div>
+    <div class="pageTitle">
+      <h3>6.</h3>
+      <h1>Downtown</h1>
+      <p>
+        <img src="../images/chapter.poignant.guide-6.jpg" alt="">
+      </p>
+    </div>
+
+    <div class="content">
+      <p><img src="../images/wixl-1.jpg" alt="Lost in Wixl" title="Lost in Wixl" />
+<img src="../images/wixl-2.gif" alt="This heist goes all the way up?" title="This heist goes all the way up?" /></p>
+
+<p>Oblivious to their involvement in the expansive plan of The Originals, both the
+tall fox and the much shorter fox had wandered right into the red alert zone,
+the city Wixl. I desire a spatula to scoop them aside with, shuffle them off to
+the coast near the beach hatcheries, hide them in piles of fish eggs, hold down
+their pointy ears, concealing their luxurious hides. And above them I would
+stand, casting an unmoving shadow, holding my rifle aloof.</p>
+
+<p>I can’t. I have you to teach. I have to groom and care for myself. The
+lightbulbs upstairs need changing. A free pack of halogen lightbulbs just showed
+up out of the mail. Somebody out there is obviously trying to get me to use
+them. So I’m going to screw ‘em in. And just stand there, casting an unmoving
+shadow, holding my rifle aloof.</p>
+
+<p>Should that shadow be nice and defined, then I’ll keep ‘em.</p>
+
+<p><a name="section1"></a></p>
+
+<h2>1. If I Were Looking For a Vehicle</h2>
+
+<p><img src="../images/wixl-7.gif" alt="Sitting for a moment." title="Sitting for a moment." /></p>
+
+<p>I like seeing these two out in the wild. They got pretty bored here in the
+studio. They started making up weird slogans and stuff. They had some phrase
+they kept repeating, forming fixations upon. You can’t be exposed to all that
+contrived fox nonsense.</p>
+
+<p>Let’s just say: I am really trying my best to keep things collegiate. Having
+never attended college, I can’t well say if every passage written chimes right
+with the stringent criteria which academia demands. I have university friends
+aplenty, some who tour the globe in their pursuits, and I try to inflect my
+voice with just their blend of high culture.</p>
+
+<p>Sometimes I applaud myself for going beyond the work of my educated friends—only
+in quiet corridors, we never butt heads publicly—because <em>I have actually
+subscribed</em> to a school of thought while they are still in their books, turning
+and turning.</p>
+
+<p><strong>I am a preeventualist.</strong> I have dabbled in it long enough and am glad to come
+forth with it. Inevitably, some of you have already started mining this book for
+Marxist symbology. I am sad to kill those interpretations, but I believe any
+nihilist conclusions you’ve drawn will still hold up under scrutiny.</p>
+
+<p>Anyway, I’ll drop the rhetoric. I only mention preeventualism because, aside
+from being a refreshing and easy alternative to the post-modernism we’re born
+with, <em>this</em> meta-cult offers a free lost-and-found service for the residents of
+Wixl.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s1">'open-uri'</span>
+<span class="nb">open</span><span class="p">(</span> <span class="s2">"http://preeventualist.org/lost"</span> <span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">lost</span><span class="o">|</span>
+  <span class="nb">puts</span> <span class="n">lost</span><span class="p">.</span><span class="nf">read</span>
+<span class="k">end</span></code></pre></figure>
+
+<p>I have no way of alerting the foxes to this service. And I’m sure it’s too soon
+for their truck to be listed. Still, the good intentions are here.</p>
+
+<p>If you’re connected to the Internet, the above Ruby should have downloaded the
+web page from the Internet and printed it to the screen. In a message resembling
+this:</p>
+
+<pre class="text">                   THE PREEVENTUALIST'S LOSING AND FINDING REGISTRY
+          (a free service benefiting the ENLIGHTENED who have been LIGHTENED)
+
+                                      ---
+                      updates are made daily, please check back!
+                                      ---
+
+                         this service is commissioned and
+                     subsidized in part by The Ashley Raymond
+                                Youth Study Clan
+
+                                      ...
+                      all seals and privileges have been filed
+                under the notable authorship of Perry W. L. Von Frowling,
+          Magistrate Polywaif of Dispossession.  Also, Seventh Straight Winner
+                   of the esteemed Persistent Beggar's Community Cup.
+                                      ...
+
+  ABOUT THE REGISTRY
+  ==================
+  Hello, if you are new, please stay with us.  A brief explanation of our service will 
+  follow.  First, a bit of important news from our beloved magistrate.  (The kids call
+  him Uncle Von Guffuncle. Tehe!)
+
+  IMPORTANT NEWS
+  ==============
+  / 15 April 2005 /
+  hi, big news.  we were on channel 8 in wixl and ordish.  cory saw it.  i was on and 
+  jerry mathers was on.  if you didn't see it, e-mail cory.  he tells it the best.  all 
+  i can say is those aren't MY hand motions!! (joke for people who watch channel 8.)  
+  thanks harry and whole channel 8 news team!!
+                                                   - perry
+
+  / 07 April 2005 /
+  we're all sifting through the carpet here at hq, but if you could all keep an eye out 
+  for caitlin's clipboard, she's too quiet of a gal to post it and i know that it's 
+  REALLY important to her.  she had a few really expensive panoramic radiographs of her 
+  husband's underbite clipped to a few irreplacable photos of her husband in a robocop 
+  costume back when the underbite was more prominent.  she says (to me), "they'll know
+  what i mean when they see them."  i don't know what that means.  :(
+
+  i've checked: * the front desk * the hall * the waiting area * the bathroom * the candy 
+  closet * the big tv area * the lunch counter * the disciples room * gaff's old room
+  (the one with the painting of the cherry tree) * the server room * staircase.  i'll 
+  update this as i find more rooms.
+                                                   - love, perry
+
+  / 25 Feb 2005 /
+  server went down at 3 o'clock.  i'm mad as you guys.  gaff is downstairs and he'll 
+  be down there until he gets it fixed. :O -- UPDATE: it's fixed, back in bizz!!
+                                                   - perry
+
+  / 23 Feb 2005 /
+  i know there's a lot of noise today.  stanley bros circus lost twelve llamas and a
+  trailer and a bunch of Masterlocks and five tents.  they're still finding lost stuff.
+  pls keep your heads, i need everyone's help.  these entertainers have _nothing_.  i 
+  mean it.  i gave a guy a purple sticker today (it's just something i like to do as a
+  kind gesture) and he practically slept on it and farmed the ingredients for pizza sauce
+  on it.  they are on rock bottom.
+
+  so please donate.  i know we don't have paypal or anything.  so if you want to donate,
+  just post that you found something (a children's bike, a month of perishable canned 
+  goods) and that it has the circus people's names written on it or something.
+                                                   - great, perry
+
+  / 15 Nov 2004 /
+  preeventualist's day sale.  if you lose something today, you get to pick one free 
+  item (of $40 value or less) from the house of somebody who found something.  we're 
+  having so much fun with this!!  this is EXACTLY how i got my rowing machine last year
+  and i LOVE IT!!
+                                                   - perry
+</pre>
+
+<p>I think the Youth Study Clan is doing a great job with this service. It’s a
+little hokey and threadbare, but if it can get animals to stop using their
+instinctive means of declaring ownership, then hats off.</p>
+
+<p>Still, a preeventualist youth group? How can that be? You’ve got to at least
+<em>flirted with real cynicism</em> before you can become a preeventualist. And you
+definitely can’t attend school. So, I don’t know.</p>
+
+<p>Going back to the list of instructions from the Preeventualist’s Losing and
+Finding Registry.</p>
+
+<pre class="text"> USING THE L&#38;F SERVER
+ ====================
+ The L&#38;F is a free service.  The acts of losing and finding are essential qualities in
+ building a preeventualist lifestyle.  We hope to accommodate your belief.
+
+ We do not use HTML, in order to simplify our work here.  Our guys are already working
+ fifteen hour days.  (Thanks, Terk!!  Thanks, Horace!!)
+
+ You may search our service for your lost items.  Or you may add your lost (or found)
+ item to our registry.  This is done by typing the proper address into your browser.
+
+ SEARCHING
+ =========
+ To search for lost items, use the following address:
+
+   http://preeventualist.org/lost/search?q={search word}
+
+ You may replace {search word} with your search term.  For example, to search for "cup":
+
+   http://preeventualist.org/lost/search?q=cup
+
+ You will be given a list of cups which have been lost or found.
+
+ If you want to search for only lost cups or only found cups, use the `searchlost' and
+ `searchfound' pages:
+
+   http://preeventualist.org/lost/searchlost?q=cup
+</pre>
+
+<p>I’m not playing games. I know where the truck is. Really, I’m not teasing you.
+I’ll show you in just a sec. I’m just saying, look at the foxes:</p>
+
+<p><img src="../images/wixl-11.gif" alt="Hummmmm." title="Hummmmm." /></p>
+
+<p>They are helpless. And yet, here is this great tool. A possible key to getting
+out of this mess. I just want to poke around, see if there are any clues here.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s1">'open-uri'</span>
+
+<span class="c1"># Searching all found items containing the word `truck'.</span>
+<span class="nb">open</span><span class="p">(</span> <span class="s2">"http://preeventualist.org/lost/searchfound?q=truck"</span> <span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">truck</span><span class="o">|</span>
+  <span class="nb">puts</span> <span class="n">truck</span><span class="p">.</span><span class="nf">read</span>
+<span class="k">end</span></code></pre></figure>
+
+<p>I’m not seeing anything about the tall fox’s truck in this list. That’s okay.
+The foxes are out of it anyway. We have some time.</p>
+
+<p>You’ve learned a very simple technique for retrieving a web page from the
+Internet. The code uses the <code>OpenURI</code> library, which was written by one of my
+favorite Rubyists, Akira Tanaka. He’s simplified reading from the Internet so
+that it’s identical to reading a file from your computer.</p>
+
+<p>In a previous chapter, we stored your diabolical ideas in a text file. You read
+these files in Ruby using <code>open</code>.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s1">'open-uri'</span>
+
+<span class="c1"># Opening an idea file from a folder on your computer.</span>
+<span class="nb">open</span><span class="p">(</span> <span class="s2">"folder/idea-about-hiding-lettuce-in-the-church-chairs.txt"</span> <span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">idea</span><span class="o">|</span>
+  <span class="nb">puts</span> <span class="n">idea</span><span class="p">.</span><span class="nf">read</span>
+<span class="k">end</span></code></pre></figure>
+
+<p>Files are <strong>input-output objects</strong>. You can read and write to a file. In Ruby,
+all IO (input-output) objects have <code>read</code> and <code>write</code> methods. The <code>open</code> method
+slides an IO object <strong>down the chute</strong> into a block for your use. IO is your
+ticket to the outside world. It’s the rays of sunlight cast through the prison
+bars. (However, you can’t <code>write</code> to a web page with <code>OpenURI</code>. You’ll need to
+find a tool for copying to your web server. An <span class="caps">FTP</span>
+program, for instance.)</p>
+
+<p>If someone wants to read your diabolical idea about hiding lettuce in the church
+chairs, assuming you’ve posted it as a web page:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s1">'open-uri'</span>
+
+<span class="c1"># Opening an idea file available on a web site.</span>
+<span class="nb">open</span><span class="p">(</span> <span class="s2">"http://your.com/idea-about-hiding-lettuce-in-the-church-chairs.txt"</span> <span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">idea</span><span class="o">|</span>
+  <span class="nb">puts</span> <span class="n">idea</span><span class="p">.</span><span class="nf">read</span>
+<span class="k">end</span></code></pre></figure>
+
+<p>The <code>OpenURI</code> library also understands <span class="caps">FTP</span> addresses
+as well. This widens the possibilities for where you can store files. On your
+system or elsewhere on the Internet.</p>
+
+<h3>Reading Files Line by Line</h3>
+
+<p>When you’re using <code>OpenURI</code> to get information from the web with the <code>open</code> and
+<code>read</code> methods, the page is given to you as a <code>String</code>. You can also read the
+page one line at a time, if you’re searching for something. Or if the page is
+big and you want to conserve your computer’s memory.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s1">'open-uri'</span>
+<span class="nb">open</span><span class="p">(</span> <span class="s2">"http://preeventualist.org/lost/searchfound?q=truck"</span> <span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">truck</span><span class="o">|</span>
+  <span class="n">truck</span><span class="p">.</span><span class="nf">each_line</span> <span class="k">do</span> <span class="o">|</span><span class="n">line</span><span class="o">|</span>
+    <span class="nb">puts</span> <span class="n">line</span> <span class="k">if</span> <span class="n">line</span><span class="p">[</span><span class="s1">'pickup'</span><span class="p">]</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></figure>
+
+<p>The above code will retrieve the list of trucks found by preeventualists, then
+display only those lines that actually contain the word ‘pickup’. That way we
+can trim out the descriptions and look for only the pertinent lines.</p>
+
+<p>Above, the <strong>index brackets</strong> are used on a string, so the string is searched
+for whatever is inside the brackets. Since the string <code>'pickup'</code> is inside the
+brackets, the <code>line</code> string is searched for the word “pickup”.</p>
+
+<p><img src="../images/wixl-13.gif" alt="On being funny." title="On being funny." /></p>
+
+<p>When a web page is loaded with <code>read</code>, the entire page is loaded into memory.
+Usually this only takes up a few thousand bytes. But if a page is big (several
+megabytes), you’ll probably want to use <code>each_line</code>, which loads one line at a
+time to avoid exhausting memory.</p>
+
+<h3>Yielding is Kiddie Blocks</h3>
+
+<p>Ruby often uses iterators in this fashion. Yes, iterators are used for cycling
+through each item in a collection of items, such as an array or hash. Now look
+at an IO source as a collection of lines. The iterator can crawl that collection
+of lines.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">IO</span>
+  <span class="c1"># Definition for the each_line method.  Notice how it has no</span>
+  <span class="c1"># argument list.  Blocks don't need to be listed as arguments.</span>
+  <span class="k">def</span> <span class="nf">each_line</span>
+    <span class="k">until</span> <span class="n">eof?</span>        <span class="c1"># until we reach the end of the file...</span>
+      <span class="k">yield</span> <span class="nb">readline</span>  <span class="c1"># pass a line into the block</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></figure>
+
+<p>The <code>yield</code> keyword is the easiest way to use a block. One word. Just like a
+curtain has a pullstring or like a suitcase has a handle. Inside a method, you
+can press the blinking <code>yield</code> button and it will run the block attached to that
+method. Glowing a strong red color until the code inside the block is done. And
+then it goes back to blinking and you can press the button again if you like.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">yield_thrice</span>
+  <span class="k">yield</span>
+  <span class="k">yield</span>
+  <span class="k">yield</span>
+<span class="k">end</span></code></pre></figure>
+
+<p>Punch the <code>yield</code> button three times quick and the block gets to live its life
+three times.</p>
+
+<pre><code>irb&gt; a = ['first, birth.', 'then, a life of flickering images.', 'and, finally, the end.']
+irb&gt; yield_thrice { puts a.shift }
+# prints out:
+#   first, birth.
+#   then, a life of flickering images.
+#   and, finally, the end.
+</code></pre>
+
+<p>The <code>shift</code> method pulls the first item off an array. The barber <code>shift</code> cuts
+the hair off and hands it over. Then, the scalp. And just keeps going, whittling
+the poor guy down to nothing.</p>
+
+<p>You’ve seen blocks attached to methods. Any Ruby method can have a block
+attached to the end.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="c1"># The brief style of attaching a block to a method.</span>
+<span class="c1"># Here the block is surrounded with curly braces.</span>
+<span class="nb">open</span><span class="p">(</span> <span class="s2">"idea.txt"</span> <span class="p">)</span> <span class="p">{</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span> <span class="n">f</span><span class="p">.</span><span class="nf">read</span> <span class="p">}</span>
+
+<span class="c1"># The verbose style of attaching a block to a method.</span>
+<span class="c1"># Here the block is surrounded with `do' and `end'</span>
+<span class="nb">open</span><span class="p">(</span> <span class="s2">"idea.txt"</span> <span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span>
+  <span class="n">f</span><span class="p">.</span><span class="nf">read</span>
+<span class="k">end</span></code></pre></figure>
+
+<p>If you pass arguments to <code>yield</code>, those arguments will also be passed to the
+block. The block is riding in a little sidecar attached to the method’s
+motorcycle. The method yells out a list arguments, screaming to the block over
+all the wind as they’re racing through the desert. The block taps his helmet
+like, “I get it, my brain gets it.”</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="c1"># The method opens two files and slides the resulting IO objects down the</span>
+<span class="c1"># chute to an attached block.</span>
+<span class="k">def</span> <span class="nf">double_open</span> <span class="n">filename1</span><span class="p">,</span> <span class="n">filename2</span>
+  <span class="nb">open</span><span class="p">(</span> <span class="n">filename1</span> <span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">f1</span><span class="o">|</span>
+    <span class="nb">open</span><span class="p">(</span> <span class="n">filename2</span> <span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">f2</span><span class="o">|</span>
+      <span class="k">yield</span> <span class="n">f1</span><span class="p">,</span> <span class="n">f2</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="c1"># Prints the files out side-by-side.</span>
+<span class="n">double_open</span><span class="p">(</span> <span class="s2">"idea1.txt"</span><span class="p">,</span> <span class="s2">"idea2.txt"</span> <span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">f1</span><span class="p">,</span> <span class="n">f2</span><span class="o">|</span>
+  <span class="nb">puts</span> <span class="n">f1</span><span class="p">.</span><span class="nf">readline</span> <span class="o">+</span> <span class="s2">" | "</span> <span class="o">+</span> <span class="n">f2</span><span class="p">.</span><span class="nf">readline</span>
+<span class="k">end</span></code></pre></figure>
+
+<p>You may also wonder what the <code>yield</code> keyword has to do with street signs. And
+really, it’s a good question with, I believe, a good answer. When you run a
+method, you are giving that method control of your program. Control to do its
+job and then come back to with an answer.</p>
+
+<p>With <code>yield</code>, the method is stopping at the intersection, giving control back to
+you, to your block. The method is letting you do your work before resuming its
+work. So while the <code>each_line</code> method does the work of actually reading lines
+from a file, the <strong>block attached to the <code>each_line</code> method</strong> is handed the line
+itself and gets a chance to hammer away at it in the sidecar.</p>
+
+<h3>Preeventualism in a Gilded Box</h3>
+
+<p>You’ve learned so much about <code>OpenURI</code> and using <code>yield</code> to write your own
+iterators. You know your way around the lost-and-found service. Really, you can
+starting hunting through the Wixl junk drawer without me.</p>
+
+<p>Let’s neatly <em>encapsulate</em> the entire service into a single class.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s1">'open-uri'</span>
+<span class="k">module</span> <span class="nn">PreEventualist</span>
+  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">open</span> <span class="n">page</span><span class="p">,</span> <span class="n">query</span>
+    <span class="n">qs</span> <span class="o">=</span>
+      <span class="n">query</span><span class="p">.</span><span class="nf">map</span> <span class="k">do</span> <span class="o">|</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="o">|</span>
+        <span class="no">URI</span><span class="p">.</span><span class="nf">escape</span> <span class="s2">"</span><span class="si">#{</span> <span class="n">k</span> <span class="si">}</span><span class="s2">=</span><span class="si">#{</span> <span class="n">v</span> <span class="si">}</span><span class="s2">"</span>
+      <span class="k">end</span><span class="p">.</span><span class="nf">join</span> <span class="s2">"&amp;"</span>
+    <span class="no">URI</span><span class="p">.</span><span class="nf">parse</span><span class="p">(</span> <span class="s2">"http://preeventualist.org/lost/"</span> <span class="o">+</span> <span class="n">page</span> <span class="o">+</span> <span class="s2">"?"</span> <span class="o">+</span> <span class="n">qs</span> <span class="p">).</span><span class="nf">open</span> <span class="k">do</span> <span class="o">|</span><span class="n">lost</span><span class="o">|</span>
+      <span class="n">lost</span><span class="p">.</span><span class="nf">read</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span> <span class="s2">"--</span><span class="se">\n</span><span class="s2">"</span> <span class="p">)</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">search</span> <span class="n">word</span>
+    <span class="nb">open</span> <span class="s2">"search"</span><span class="p">,</span> <span class="s2">"q"</span> <span class="o">=&gt;</span> <span class="n">word</span>
+  <span class="k">end</span>
+  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">searchlost</span> <span class="n">word</span>
+    <span class="nb">open</span> <span class="s2">"searchlost"</span><span class="p">,</span> <span class="s2">"q"</span> <span class="o">=&gt;</span> <span class="n">word</span>
+  <span class="k">end</span>
+  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">searchfound</span> <span class="n">word</span>
+    <span class="nb">open</span> <span class="s2">"searchfound"</span><span class="p">,</span> <span class="s2">"q"</span> <span class="o">=&gt;</span> <span class="n">word</span>
+  <span class="k">end</span>
+  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">addfound</span> <span class="n">your_name</span><span class="p">,</span> <span class="n">item_lost</span><span class="p">,</span> <span class="n">found_at</span><span class="p">,</span> <span class="n">description</span>
+    <span class="nb">open</span> <span class="s2">"addfound"</span><span class="p">,</span> <span class="s2">"name"</span> <span class="o">=&gt;</span> <span class="n">your_name</span><span class="p">,</span> <span class="s2">"item"</span> <span class="o">=&gt;</span> <span class="n">item_lost</span><span class="p">,</span>
+                     <span class="s2">"at"</span> <span class="o">=&gt;</span> <span class="n">found_at</span><span class="p">,</span> <span class="s2">"desc"</span> <span class="o">=&gt;</span> <span class="n">description</span>
+  <span class="k">end</span>
+  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">addlost</span> <span class="n">your_name</span><span class="p">,</span> <span class="n">item_found</span><span class="p">,</span> <span class="n">last_seen</span><span class="p">,</span> <span class="n">description</span>
+    <span class="nb">open</span> <span class="s2">"addlost"</span><span class="p">,</span> <span class="s2">"name"</span> <span class="o">=&gt;</span> <span class="n">your_name</span><span class="p">,</span> <span class="s2">"item"</span> <span class="o">=&gt;</span> <span class="n">item_found</span><span class="p">,</span>
+                    <span class="s2">"seen"</span> <span class="o">=&gt;</span> <span class="n">last_seen</span><span class="p">,</span> <span class="s2">"desc"</span> <span class="o">=&gt;</span> <span class="n">description</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></figure>
+
+<p>At some point with your code, you need to start shaping it into something neat.
+Save the above module in a file called <code>preeventualist.rb</code>.</p>
+
+<p>This module is a very simple library for using the Preeventualist’s service.
+This is exactly the way libraries are written. You whip up a module or a class,
+store it in a file, and, if you’re happy with it and want the world to benefit,
+put it on the web.</p>
+
+<p>These stragglers can use your module just like I used <code>OpenURI</code> earlier.</p>
+
+<pre><code>irb&gt; require 'preeventualist'
+irb&gt; puts PreEventualist.search( 'truck' )
+irb&gt; puts PreEventualist.addfound( 'Why', 'Ruby skills', 'Wixl park',
+       "I can give you Ruby skills!\nCome visit poignantguide.net!" )
+</code></pre>
+
+<p><a name="section2"></a></p>
+
+<h2>2. Meanwhile, The Porcupine Stops To Fill-Up</h2>
+
+<p><img src="../images/porcupine-1.gif" alt="The porcupine pays for gas.  Kites?" title="The porcupine pays for gas.  Kites?" /></p>
+
+<p><a name="section3"></a></p>
+
+<h2>3. A Sponsored Dragon-Slaying</h2>
+
+<p><img src="../images/wixl.dwemthy-1.gif" alt="The slayer hops in." title="The slayer hops in." /></p>
+
+<p>“Look around,” said Fox Small. “Some of us don’t have time for quests. Some of
+us have major responsibilities, jobs, so on. Livelihood, got it?”</p>
+
+<p>“<em>Heyyyy</em>, my <strong><span class="caps">JOB</span></strong> was to kill the drgn!!” screamed
+the wee rabbit, blinking his eyes and bouncing frantically from tree to tree to
+pond to pond. “His snout was a <strong><span class="caps">HUGE</span></strong>
+responsibility!! His smoky breath was <em>mine to reckon with!!</em> I spent fifty
+dollars on the cab <strong><span class="caps">JUST</span></strong> to get out there, which
+was another <em>huge huge</em> ordeal. You have <em>nothing on me</em>, not a <em>single</em>
+indictment, my whole <strong><span class="caps">HERONESS</span></strong> is <em>absoflutely
+unimpeachable</em>, my whole <strong><span class="caps">APPROACH</span></strong> is <em>abassoonly
+unapricotable</em>, just ask Lester.”</p>
+
+<aside class="sidebar">
+  <h2>The Inadvertent Meteor</h2>
+
+  <p><em>When I first began my inquiry into preeventualism, I was relayed the following
+story. I was told that this was all I needed to understand the philosophy.</em></p>
+
+  <p>There was this sculptor who just wasn’t satisfied with his work. He had
+primarily studied traditional subject matter and excelled at sculpting both the
+human figure and elaborate vegetation. And he was really quite an exquisite
+sculptor. He just didn’t feel like he was making his mark upon the world.</p>
+
+  <p>By this time, he had aged well into his fifties and wanted to vaunt into the
+realm of legendary masters. So he began to construct a massive sculpture of two
+pears with beads of dew clinging precariously to them.</p>
+
+  <p>The sculpture was enormous and hovered ominously above the sculptor’s hometown,
+held aloof by a massive infrastructure of struts and beams. In fact, the giant
+pears were so significant that they truly wreaked havoc on the Earth’s rotation,
+ever so slightly, what with a new asteroid-sized fruit basket clinging to it.</p>
+
+  <p>The government sent jets and war crafts to destroy the statue. They unleashed a
+vicious attack on the village, dismantling the statue, blowing it into thousands
+of pieces, chipping away at it with missiles. Soon enough, the statue was
+obliterated and all was back to normal.</p>
+
+  <p>A huge chunk of the statue had taken orbit in the heavens and often veered
+perilously close to the planet. When it did, it was always met by an arsenal of
+advanced weaponry, which further damaged it and deflected its course skyward.</p>
+
+  <p>Eventually, this inadvertent meteor was nothing more than the size of a very
+daunting man. And, when it at last hit the ground, weathered and polished by its
+ninety year journey, it was hailed as an enigmatic masterpiece, a message from
+the great beyond. Here was a stunning likeness of a male nude looking wistfully
+into the sky with an intricate lace work of vines creeping around his waist and
+covering his improprieties.</p>
+
+  <p>The statue was last sold for fifty-two million dollars and stayed in the
+permanent exhibit at the Louvre, with the plaque:</p>
+
+  <blockquote>
+    <p>“Heavenly Nude” by Anonymous</p>
+  </blockquote>
+</aside>
+
+<p>“Who’s Lester?” said the Fox Small.</p>
+
+<p>“Lester’s my cab driver! He parked at the base of Dwemthy’s Array!!” The rabbit
+ricocheted madly like a screensaver for a supercomputer. <em>“Just ask Dwemthy!!”</em></p>
+
+<p>“Well,” said the Fox Small. He turned back to look up at Fox Tall, who was
+sitting straight and looking far into the distance. “Wait, they have a parking
+lot on Dwemthy’s Array?”</p>
+
+<p><strong>“YEP!!</strong> And a pretzel stand!!”</p>
+
+<p>“But, it’s <em>an Array</em>? Do they sell churros?”</p>
+
+<p><strong>“CHOCOLAVA!!”</strong> bleeted the rabbit.</p>
+
+<p>“What about those glow-in-the-dark ropes that you can put in your hair? Or you
+can just hold them by your side or up in the air—”</p>
+
+<p><strong>“BRAIDQUEST!!”</strong></p>
+
+<p>“You should get a cut of the salesman’s commission,” spoke Fox Small. “Folks
+came out to see you kill the dragon, right?”</p>
+
+<p><strong>“BUT!!</strong> I don’t operate the tongs that actually extract the chocolava.”</p>
+
+<p>“I’m just sayin’. You <strong>do</strong> operate the killing mechanism. So you <em>have a stake</em>
+in the ensalada.”</p>
+
+<p>“OH NO!! I left my favorite lettuce leaves in Dwemthy’s Array!!” squealed the
+rabbit, twirling like a celebratory saber through the quaking oak. Distantly:
+“Or Lester’s trunk, maybe?”</p>
+
+<p>“You know—Gheesh, can you stay put??” said Fox Small.</p>
+
+<p>“My radio,” said Fox Tall, stirring to life for a moment, “in my pickup.” The
+glaze still seeping from his eyes. His stare quivered and set back into his
+face, recalling another time and place. A drive out to Maryland. Sounds of
+Lionel Richie coming in so clearly. The wipers going a bit too fast. He pulls up
+to a house. His mother answers the door. She is a heavily fluffed fox. Tears and
+makeup.</p>
+
+<p>Slumping back down, “That porcupine is changing my presets.”</p>
+
+<p>The rabbit bounded up on to the armrest of the park bench and spoke closely.
+<strong>“BUT!!</strong> Soon I will feast on drgn’s head and the juices of drgn’s tongue!!”
+The rabbit sat still and held his paws kindly.</p>
+
+<p>“(Which I hope will taste like cinnamon bears,)” whispered the rabbit,
+intimately.</p>
+
+<p>“I love cinnamon,” said Fox Small. “I should go killing with you some time.”</p>
+
+<p>“You should,” said the rabbit and the eyes shine-shined.</p>
+
+<p>“Although, salivating over a tongue. You don’t salivate over it, do you?”</p>
+
+<p>“I DO!!” and the rabbit got so excited that Sticky Whip shot out of his eyes.
+(More on Sticky Whip in a later sidebar. Don’t let me forget. See also: <em>The
+Purist’s Compendium to Novelty Retinal Cremes</em> by Jory Patrick Sobgoblin,
+available wherever animal attachment clips are sold.)</p>
+
+<p>“Okay, you’ve hooked me. I want to hear all about it,” Fox Small declared.
+“Please, talk freely about the chimbly. Oh, and Dwemthy. Who is he? What makes
+him tick? Then maybe, if I’m still around after that, you can tell me about what
+makes rabbits tick, and maybe you can hold our hands through this whole missing
+truck ordeal. I need consolation more than anything else. I could probably use
+religion right now. I could use your personal bravery and this sense of
+accomplishment you exude. Do you smoke a pipe? Could be a handy tool to coax
+along the pontification we must engage in.”</p>
+
+<p>And the rabbit began expounding upon Dwemthy and the legend of Dwemthy and the
+ways of Dwemthy. As with most stories of Dwemthy, the rabbit’s tales were mostly
+embellishments. Smotchkkiss, there are delicacies which I alone must address.</p>
+
+<p>Please, never ask who Dwemthy is. Obviously he is a mastermind and would never
+disclose his location or true identity. He has sired dynasties. He has set
+living ogres aflame. Horses everywhere smell him at all times. Most of all, he
+knows carnal pleasures. And to think that this…</p>
+
+<p>This is his Array.</p>
+
+<h3>Dwemthy’s Array</h3>
+
+<p><img src="../images/dwemthy-asweome.gif" alt="Dwemthy's Array has charmed and tormented the village folk for
+centuries." title="Dwemthy's Array has charmed and
+tormented the village folk for centuries." /></p>
+
+<p>You stand at the entrance of Dwemthy’s Array. You are a rabbit who is about to
+die. And deep at the end of the Array:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Dragon</span> <span class="o">&lt;</span> <span class="no">Creature</span>
+  <span class="n">life</span> <span class="mi">1340</span>     <span class="c1"># tough scales</span>
+  <span class="n">strength</span> <span class="mi">451</span>  <span class="c1"># bristling veins</span>
+  <span class="n">charisma</span> <span class="mi">1020</span> <span class="c1"># toothy smile</span>
+  <span class="n">weapon</span> <span class="mi">939</span>    <span class="c1"># fire breath</span>
+<span class="k">end</span></code></pre></figure>
+
+<p>A scalding <em><span class="caps">SEETHING LAVA</span></em> infiltrates the
+<strong>cacauphonous <span class="caps">ENGORGED MINESHAFTS</span></strong> deep within the
+ageless canopy of the <em><span class="caps">DWEMTHY FOREST</span></em>… chalky and
+nocturnal screams from <strong>the belly of the <span class="caps">RAVENOUS WILD
+STORKUPINE</span></strong>… who eats <strong>wet goslings</strong> <em><span class="caps">RIGHT
+AFTER</span></em> they’ve had a few graham crackers and a midday nap… amidst starved
+hippos <em><span class="caps">TECHNICALLY ORPHANED</span></em> but truthfully sheltered
+by umbrellas owned jointly by car dealership conglomerates… beneath <em>uncapped
+vials</em> of mildly pulpy <strong><span class="caps">BLUE ELIXIR</span></strong>… <em>which shall
+remain… heretofore… <strong><span class="caps">UNDISTURBED</span>… <span class="caps">DWEMTHY</span>!!!</strong></em></p>
+
+<p><img src="../images/wixl.dwemthy-2.gif" alt="Luck and mother nature." title="Luck and mother nature." /></p>
+
+<p><em>If you don’t understand Dwemthy’s Array, it is Dwemthy’s fault. He designed the
+game to complicate our lives and were it simpler, it would not be the
+awe-inspiring quest we’ve come to cherish in our arms this very hour.</em></p>
+
+<p>Dwemthy’s Array has a winding history of great depth. It is not enough to simply
+say, “Dwemthy’s Array,” over and over and expect to build credentials from that
+act alone. Come with me, I can take you back a couple years, back to the sixties
+where it all started with metaprogramming and the dolphins.</p>
+
+<p>You might be inclined to think that <strong>metaprogramming</strong> is another hacker word
+and was first overheard in private phone calls between fax machines. Honest to
+God, I am here to tell you that it is stranger than that. Metaprogramming began
+with <em>taking drugs in the company of dolphins</em>.</p>
+
+<p>In the sixties, a prolific scientist named John C. Lilly began experimenting
+with his own senses, to uncover the workings of his body. I can relate to this.
+I do this frequently when I am standing in the middle of a road holding a pie or
+when I am hiding inside a cathedral. I pause to examine my self. This has proven
+to be nigh impossible. I have filled three ruled pages with algebraic notation,
+none of which has explained anything. The pie, incidentally, has been very easy
+to express mathematically.</p>
+
+<p>But the scientist Lilly went about his experiments otherwise. He ingested <span class="caps">LSD</span> in the company of dolphins. Often in a dark, woeful
+isolation tank full of warm salt water. Pretty bleak. But it was science! (Lest
+you think him criminal: until 1966, <span class="caps">LSD</span> was supplied
+by Sandoz Laboratories to any interested scientists, free of charge.)</p>
+
+<p><strong>Drugs, dolphins and deprivation.</strong> Which led to Lilly’s foray into things
+meta. He wrote books on mental programming, comparing humans and computers. You
+may choose to ingest any substance you want during this next quote—most likely
+you’re reaching for the grain of salt—but I assure you that there’s no Grateful
+Dead show on the lawn and no ravers in the basement.</p>
+
+<blockquote>
+  <p>When one learns to learn, one is making models, using symbols, analogizing,
+making metaphors, in short, inventing and using language, mathematics, art,
+politics, business, etc. At the critical brain (cortex) size, languages and
+its consequences appear. To avoid the necessity of repeating learning to
+learn, symbols, metaphors, models each time, I symbolize the underlying idea
+in these operations as metaprogramming.</p>
+
+  <p>John C. Lilly, <em>Programming and Metaprogramming in the Human
+Biocomputer</em>, New York, 1972.</p>
+</blockquote>
+
+<p>We learn. But first we learn to learn. We setup programming in our mind which is
+the pathway to further programming. (Lilly is largely talking about programming
+the brain and the nervous system, which he collectively called the
+<em>biocomputer</em>.)</p>
+
+<p>Lilly’s metaprogramming was more about feeding yourself imagery, reinventing
+yourself, all that. This sort of thinking links directly to folks out there who
+dabble in shamanism, wave their hands over tarot cards and wake up early for
+karate class. I guess you could say metaprogramming is New Age, but it’s all
+settled down recently into a sleeping bag with plain old nerdiness. (If you got
+here from a Google search for “C++ Metaprogramming”, stick around, but I only
+ask that you <em>burn</em> those neural pathways that originally invoked the search.
+Many thanks.)</p>
+
+<p>Meta itself is spoken of no differently in your author’s present day.</p>
+
+<blockquote>
+  <p>All sensuous response to reality is an interpretation of it. Beetles and
+monkeys clearly interpret their world, and act on the basis of what they see.
+Our physical senses are themselves organs of interpretation. What
+distinguishes us from our fellow animals is that we are able in turn to
+interpret these interpretations. In that sense, all human language is
+meta-language. It is a second-order reflection on the ‘language’ of our
+bodies—of our sensory apparatus.</p>
+
+  <p>Terry Eagleton, <em>After Theory</em>, London, 2003, ch. 3.</p>
+</blockquote>
+
+<p>To that end, you could say programming itself is a meta-language. <em>All code</em>
+speaks the language of action, of a plan which hasn’t been played yet, but
+shortly will. Stage directions for the players inside your machine. I’ve waxed
+sentimental on this before.</p>
+
+<p>But now we’re advancing our study, venturing into metaprogramming, but don’t
+sweat it, <strong>it’s still just the Ruby you’ve seen already</strong>, which is why Dwemthy
+feels no qualms thrusting it at you right away. Soon enough it will be as easy
+to spot as addition or subtraction. At first it may seem intensely bright, like
+you’ve stumbled across your first firefly, which has flown up in your face.
+Then, it becomes just <em>a little bobbing light</em> which makes living in Ohio so
+much nicer.</p>
+
+<aside class="sidebar">
+  <h2>Bread Riddles</h2>
+
+  <p>Question: Can one take five bites from a bread and make the shape of a bicycle?
+Answer: Yes.</p>
+
+  <p>Question: Can one rip a bread in half and still fit the bread in an envelope?
+Answer: Yes.</p>
+
+  <p>Question: Can one man take a bread and throw it while another man sits without
+bread? Answer: Yes.</p>
+
+  <p>Question: Can four breads in a box be explained? Answer: Yes.</p>
+
+  <p>Question: Can a clerical error in my company books be attributed to bread?
+Answer: Yes.</p>
+
+  <p>Question: Can dancers break through a scrim of bread? Answer: Yes.</p>
+
+  <p>Question: Can those same dancers, when faced with an inexplicably different
+scrim of bread, fail to break through? Answer: Yes.</p>
+
+  <p>Question: Does bread understand my darkest fears and wildest dreams? Answer:
+Yes.</p>
+
+  <p>Question: Does bread desire me? Answer: Yes.</p>
+
+  <p>Question: Will bread be invisible to robots? Answer: Yes.</p>
+
+  <p>Question: Can one robot take eight bites on a bread, without knowing it’s there,
+and make the shape of a smaller bread? Answer: Yes.</p>
+
+  <p>Question: Should my clerics be equipped with bread? Answer: Yes.</p>
+
+  <p>Question: In relation to bread, will robots each have their own elephants?
+Answer: Yes.</p>
+
+  <p>Question: Can one rip a bread in half and not let it ruin one’s game of
+dominoes? Answer: Yes.</p>
+
+  <p>Question: Will we always love bread? Answer: Yes.</p>
+
+  <p>Question: Will we have more bread? Answer: Yes.</p>
+
+  <p>Question: Can four breads marry a robot’s elephant? Answer: Yes.</p>
+</aside>
+
+<p>Metaprogramming is <em>writing code which writes code</em>. But not as M.C. Escher
+would sketch it. <strong>The program isn’t reaching back around and overwriting
+itself, nor is the program jumping onto your screen and wrenching the keyboard
+from your hands.</strong> No, it’s much smaller than that.</p>
+
+<p>Let’s say it’s more like <strong>a little orange pill</strong> you won at the circus. When
+you suck on it, the coating wears away and behind your teeth hatches a massive,
+floppy sponge brontosaurus. He slides down your tongue and leaps free,
+frolicking over the pastures, yelping, “Papa!” And from then on, whenever he
+freaks out and attacks a van, well, that van is <em>sparkling clean</em> afterwards.</p>
+
+<p>Now, let’s say <em>someone else</em> puts <strong>their little orange pill</strong> under the
+faucet. Not on their tongue, <em>under the faucet</em>. And this triggers a different
+catalysm, which births a set of wailing sponge sextuplets. <strong>Umbilical cords and
+everything.</strong> Still very handy for cleaning the van. But an altogether different
+kind of chamois. And, one day, these eight will stir Papa to tears when they
+perform the violin concerto of their lives.</p>
+
+<p>Metaprogramming is packing code into pill-form, such that a slender drop of
+water could trigger it to expand. More importantly, you can control the pill’s
+reaction, so that a brontosaurus is produced, scaly and lumbering. Or septulets,
+<strong><span class="caps">CERTAINLY</span></strong>. Or seamstresses. Or cat brains. Or
+dragons.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Dragon</span> <span class="o">&lt;</span> <span class="no">Creature</span>
+  <span class="n">life</span> <span class="mi">1340</span>     <span class="c1"># tough scales</span>
+  <span class="n">strength</span> <span class="mi">451</span>  <span class="c1"># bristling veins</span>
+  <span class="n">charisma</span> <span class="mi">1020</span> <span class="c1"># toothy smile</span>
+  <span class="n">weapon</span> <span class="mi">939</span>    <span class="c1"># fire breath</span>
+<span class="k">end</span></code></pre></figure>
+
+<p>This is not metaprogramming yet. Only the pill. The <em>product</em> of
+metaprogramming. We are pausing, looking at the beast itself before descending
+beneath its flesh with a scalpel and microscope.</p>
+
+<p>The <code>Dragon</code> is a class. You’ve seen that many times now. The <code>Dragon</code> is a
+descendant of the <code>Creature</code> class.</p>
+
+<p>Now, eyes up. Look at me. The <code>Creature</code> class contains the metaprogramming
+code. You can write metaprogramming code which can be used <em>everywhere</em>,
+throughout Ruby, in <code>Creature</code> or <code>Dragon</code>, in <code>String</code> or in <code>Object</code>,
+anywhere. Our example here, since this is the most common form of meta-code,
+focuses on metaprogramming inside your own classes only.</p>
+
+<p>Each of the <code>Dragon</code>’s traits are simply <strong>class methods</strong>. You could also write
+this as:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Dragon</span> <span class="o">&lt;</span> <span class="no">Creature</span>
+  <span class="n">life</span><span class="p">(</span> <span class="mi">1340</span> <span class="p">)</span>     <span class="c1"># tough scales</span>
+  <span class="n">strength</span><span class="p">(</span> <span class="mi">451</span> <span class="p">)</span>  <span class="c1"># bristling veins</span>
+  <span class="n">charisma</span><span class="p">(</span> <span class="mi">1020</span> <span class="p">)</span> <span class="c1"># toothy smile</span>
+  <span class="n">weapon</span><span class="p">(</span> <span class="mi">939</span> <span class="p">)</span>    <span class="c1"># fire breath</span>
+<span class="k">end</span></code></pre></figure>
+
+<p>Removing the parens removes clutter, so let’s leave them out. Only use parens
+when you are using several methods together and you want to be very clear.</p>
+
+<h3>Creature Code</h3>
+
+<p>Now, with a lateral slice across the diaphragm, we expose the innards of
+<code>Creature</code>. <strong>Save this code into a file called <code>dwemthy.rb</code>.</strong></p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="c1"># The guts of life force within Dwemthy's Array</span>
+<span class="k">class</span> <span class="nc">Creature</span>
+
+  <span class="c1"># Get a metaclass for this class</span>
+  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">metaclass</span><span class="p">;</span> <span class="k">class</span> <span class="o">&lt;&lt;</span> <span class="nb">self</span><span class="p">;</span> <span class="nb">self</span><span class="p">;</span> <span class="k">end</span><span class="p">;</span> <span class="k">end</span>
+
+  <span class="c1"># Advanced metaprogramming code for nice, clean traits</span>
+  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">traits</span><span class="p">(</span> <span class="o">*</span><span class="n">arr</span> <span class="p">)</span>
+    <span class="k">return</span> <span class="vi">@traits</span> <span class="k">if</span> <span class="n">arr</span><span class="p">.</span><span class="nf">empty?</span>
+
+    <span class="c1"># 1. Set up accessors for each variable</span>
+    <span class="nb">attr_accessor</span><span class="p">(</span> <span class="o">*</span><span class="n">arr</span> <span class="p">)</span>
+
+    <span class="c1"># 2. Add a new class method to for each trait.</span>
+    <span class="n">arr</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">a</span><span class="o">|</span>
+      <span class="n">metaclass</span><span class="p">.</span><span class="nf">instance_eval</span> <span class="k">do</span>
+        <span class="n">define_method</span><span class="p">(</span> <span class="n">a</span> <span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">val</span><span class="o">|</span>
+          <span class="vi">@traits</span> <span class="o">||=</span> <span class="p">{}</span>
+          <span class="vi">@traits</span><span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="o">=</span> <span class="n">val</span>
+        <span class="k">end</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+
+    <span class="c1"># 3. For each monster, the `initialize' method</span>
+    <span class="c1">#    should use the default number for each trait.</span>
+    <span class="nb">class_eval</span> <span class="k">do</span>
+      <span class="n">define_method</span><span class="p">(</span> <span class="ss">:initialize</span> <span class="p">)</span> <span class="k">do</span>
+        <span class="nb">self</span><span class="p">.</span><span class="nf">class</span><span class="p">.</span><span class="nf">traits</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">k</span><span class="p">,</span><span class="n">v</span><span class="o">|</span>
+          <span class="nb">instance_variable_set</span><span class="p">(</span><span class="s2">"@</span><span class="si">#{</span><span class="n">k</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+        <span class="k">end</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+
+  <span class="k">end</span>
+
+  <span class="c1"># Creature attributes are read-only</span>
+  <span class="n">traits</span> <span class="ss">:life</span><span class="p">,</span> <span class="ss">:strength</span><span class="p">,</span> <span class="ss">:charisma</span><span class="p">,</span> <span class="ss">:weapon</span>
+<span class="k">end</span></code></pre></figure>
+
+<p>Focus on the closing lines of code, specifically the line where the <code>traits</code> are
+being set up. All of the code before that line sets up the <code>traits</code> class
+method. This bears resemblance to the basic lottery tickets from the chapter
+previous.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">LotteryTicket</span>
+  <span class="nb">attr_reader</span> <span class="ss">:picks</span><span class="p">,</span> <span class="ss">:purchased</span>
+<span class="k">end</span></code></pre></figure>
+
+<p>Both <code>traits</code> and <code>attr_reader</code> are simply class methods. When <code>attr_reader</code> is
+used in the <code>LotteryTicket</code>, metaprogramming kicks in behind the scenes and
+starts blowing up balloons, creating <strong>reader</strong> methods for the instance
+variables <code>@picks</code> and <code>@purchased</code> above.</p>
+
+<p>The code for the <code>traits</code> method is the metaprogramming I’ve been alluding to.
+Comments in the code reveal the three stages the method goes through when adding
+traits.</p>
+
+<ol>
+  <li>The <strong>list of traits is passed on to <code>attr_accessor</code></strong>, which builds
+<strong>reader</strong> and <strong>writer</strong> code for instance variables. One for each trait.</li>
+  <li><strong>Class methods are added</strong> for each trait. (A <code>life</code> class method is added
+for a <code>:life</code> trait.) These class methods are used in the class definition
+just like you would use <code>traits</code> or <code>attr_accessor</code>. This way, you can
+specify the trait, along with the points given for a trait to a certain
+creature.</li>
+  <li><strong>Add an initialize method</strong> which sets up a new monster properly, grabbing
+the right points and <em><span class="caps">POWER UP</span>! POWER UP!</em> the
+monster is alive!</li>
+</ol>
+
+<p>The beauty of these three steps is that you’ve taught Ruby how to code monsters
+for you. So when Ruby gets to the <code>traits</code>:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Creature</span>
+  <span class="n">traits</span> <span class="ss">:life</span><span class="p">,</span> <span class="ss">:strength</span><span class="p">,</span> <span class="ss">:charisma</span><span class="p">,</span> <span class="ss">:weapon</span>
+<span class="k">end</span></code></pre></figure>
+
+<p>Ruby fills in the code behind the scenes and transplants a spiny green heart and
+jumpstarts the body with a pullcord. Ruby will use the metaprogramming from the
+<code>Creature</code> class and build out all the various methods, expanding the <code>traits</code>
+list like this:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Creature</span>
+
+  <span class="c1"># 1. set up reader and writer methods</span>
+  <span class="nb">attr_accessor</span> <span class="ss">:life</span><span class="p">,</span> <span class="ss">:strength</span><span class="p">,</span> <span class="ss">:charisma</span><span class="p">,</span> <span class="ss">:weapon</span>
+
+  <span class="c1"># 2. add new class methods to use in creature</span>
+  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">life</span><span class="p">(</span> <span class="n">val</span> <span class="p">)</span>
+    <span class="vi">@traits</span> <span class="o">||=</span> <span class="p">{}</span>
+    <span class="vi">@traits</span><span class="p">[</span><span class="s1">'life'</span><span class="p">]</span> <span class="o">=</span> <span class="n">val</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">strength</span><span class="p">(</span> <span class="n">val</span> <span class="p">)</span>
+    <span class="vi">@traits</span> <span class="o">||=</span> <span class="p">{}</span>
+    <span class="vi">@traits</span><span class="p">[</span><span class="s1">'strength'</span><span class="p">]</span> <span class="o">=</span> <span class="n">val</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">charisma</span><span class="p">(</span> <span class="n">val</span> <span class="p">)</span>
+    <span class="vi">@traits</span> <span class="o">||=</span> <span class="p">{}</span>
+    <span class="vi">@traits</span><span class="p">[</span><span class="s1">'charisma'</span><span class="p">]</span> <span class="o">=</span> <span class="n">val</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">weapon</span><span class="p">(</span> <span class="n">val</span> <span class="p">)</span>
+    <span class="vi">@traits</span> <span class="o">||=</span> <span class="p">{}</span>
+    <span class="vi">@traits</span><span class="p">[</span><span class="s1">'weapon'</span><span class="p">]</span> <span class="o">=</span> <span class="n">val</span>
+  <span class="k">end</span>
+
+  <span class="c1"># 3. initialize sets the default points for</span>
+  <span class="c1">#    each trait</span>
+  <span class="k">def</span> <span class="nf">initialize</span>
+    <span class="nb">self</span><span class="p">.</span><span class="nf">class</span><span class="p">.</span><span class="nf">traits</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">k</span><span class="p">,</span><span class="n">v</span><span class="o">|</span>
+      <span class="nb">instance_variable_set</span><span class="p">(</span><span class="s2">"@</span><span class="si">#{</span><span class="n">k</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+
+<span class="k">end</span></code></pre></figure>
+
+<p>Now, Ruby will gladly accept this six-line <code>Dragon</code> code, short enough to look
+nice when printed on playing cards:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Dragon</span> <span class="o">&lt;</span> <span class="no">Creature</span>
+  <span class="n">life</span> <span class="mi">1340</span>     <span class="c1"># tough scales</span>
+  <span class="n">strength</span> <span class="mi">451</span>  <span class="c1"># bristling veins</span>
+  <span class="n">charisma</span> <span class="mi">1020</span> <span class="c1"># toothy smile</span>
+  <span class="n">weapon</span> <span class="mi">939</span>    <span class="c1"># fire breath</span>
+<span class="k">end</span></code></pre></figure>
+
+<h3>Eval, the Littlest Metaprogrammer</h3>
+
+<p>While the metaprogramming code above is just plain Ruby, it can be difficult to
+follow still. I totally understand if you’ve come to this point and your eyes
+are spinning in their sockets and your knees have locked up. The trickiest parts
+of the above are the lines which call the methods <code>instance_eval</code> and
+<code>class_eval</code>. Just rub some tiger balm on your joints while I talk about <code>eval</code>.</p>
+
+<p>We’ve been talking about <strong>metaprogramming</strong>. Writing code which writes code.
+The <code>eval</code> method hangs out in this alley. The vagrant <code>eval</code> takes code you
+have stored up in a string and it executes that code.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">drgn</span> <span class="o">=</span> <span class="no">Dragon</span><span class="p">.</span><span class="nf">new</span>
+<span class="c1"># is identical to...</span>
+<span class="n">drgn</span> <span class="o">=</span> <span class="nb">eval</span><span class="p">(</span> <span class="s2">"Dragon.new"</span> <span class="p">)</span>
+<span class="c1"># or, alternatively...</span>
+<span class="nb">eval</span><span class="p">(</span> <span class="s2">"drgn = Dragon.new"</span> <span class="p">)</span></code></pre></figure>
+
+<p>Here, let’s write a program which has a hole in it. Instead of writing a program
+which creates a new <code>Dragon</code>, let’s leave a hole where the <code>Dragon</code> would be.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">print</span> <span class="s2">"What monster class have you come to battle? "</span>
+<span class="n">monster_class</span> <span class="o">=</span> <span class="nb">gets</span>
+<span class="nb">eval</span><span class="p">(</span> <span class="s2">"monster = "</span> <span class="o">+</span> <span class="n">monster_class</span> <span class="o">+</span> <span class="s2">".new"</span> <span class="p">)</span>
+<span class="nb">p</span> <span class="n">monster</span></code></pre></figure>
+
+<p>The program asks for a monster. If you type in <code>Dragon</code>, then the
+<code>monster_class</code> variable will contain the string <code>"Dragon"</code>. Inside the <code>eval</code>,
+a few strings get added together to make the string <code>"monster = Dragon.new"</code>.
+And when the <code>eval</code> executes this string, the <code>monster</code> variable contains a
+<code>Dragon</code> object. Ready for battle.</p>
+
+<p>This is great! Now we can leave it up to the player to pick a monster! Of
+course, we’re trusting the player to supply a real monster class. If they type
+in <code>BotanicalWitch</code> and there is no <code>BotanicalWitch</code> class, they’ll get an
+exception tossed in their face.</p>
+
+<p>So, in short, <code>eval</code> lets you make up code as you go. Which can be useful and
+which can be dangerous as well.</p>
+
+<p>The <code>instance_eval</code> and <code>class_eval</code> method used in the metaprogramming for the
+<code>Creature</code> class are slightly different from the normal <code>eval</code>. These two
+special methods run code just like <code>eval</code> does, but they duck into classes and
+objects and run the code there.</p>
+
+<pre><code># The instance_eval method runs code as if it were run inside an
+# object's instance method.
+irb&gt; drgn = Dragon.new
+irb&gt; drgn.instance_eval do
+irb&gt;   @name = "Tobias" 
+irb&gt; end
+
+irb&gt; drgn.instance_variable_get( "@name" )
+  =&gt; "Tobias" 
+
+# The class_eval method runs code is if inside a class definition.
+irb&gt; Dragon.class_eval do
+irb&gt;   def name; @name; end
+irb&gt; end
+
+irb&gt; drgn.name
+  =&gt; "Tobias"
+</code></pre>
+
+<p>As you can see above, the <code>instance_eval</code> and <code>class_eval</code> methods also can take
+a code block instead of a string. Which is just how things are done in Dwemthy’s
+Array.</p>
+
+<h3>Enough Belittling Instruction and Sly Juxtaposition—Where Is Dwemthy’s Array??</h3>
+
+<p>Tread carefully—here is <strong>the other half of <span class="caps">DWEMTHY</span>’S
+<span class="caps">ARRAY</span>!!</strong> <strong>Add these lines to <code>dwemthy.rb</code>.</strong></p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Creature</span>
+
+  <span class="c1"># This method applies a hit taken during a fight.</span>
+  <span class="k">def</span> <span class="nf">hit</span><span class="p">(</span> <span class="n">damage</span> <span class="p">)</span>
+    <span class="n">p_up</span> <span class="o">=</span> <span class="nb">rand</span><span class="p">(</span> <span class="n">charisma</span> <span class="p">)</span>
+    <span class="k">if</span> <span class="n">p_up</span> <span class="o">%</span> <span class="mi">9</span> <span class="o">==</span> <span class="mi">7</span>
+      <span class="vi">@life</span> <span class="o">+=</span> <span class="n">p_up</span> <span class="o">/</span> <span class="mi">4</span>
+      <span class="nb">puts</span> <span class="s2">"[</span><span class="si">#{</span> <span class="nb">self</span><span class="p">.</span><span class="nf">class</span> <span class="si">}</span><span class="s2"> magick powers up </span><span class="si">#{</span> <span class="n">p_up</span> <span class="si">}</span><span class="s2">!]"</span>
+    <span class="k">end</span>
+    <span class="vi">@life</span> <span class="o">-=</span> <span class="n">damage</span>
+    <span class="nb">puts</span> <span class="s2">"[</span><span class="si">#{</span> <span class="nb">self</span><span class="p">.</span><span class="nf">class</span> <span class="si">}</span><span class="s2"> has died.]"</span> <span class="k">if</span> <span class="vi">@life</span> <span class="o">&lt;=</span> <span class="mi">0</span>
+  <span class="k">end</span>
+
+  <span class="c1"># This method takes one turn in a fight.</span>
+  <span class="k">def</span> <span class="nf">fight</span><span class="p">(</span> <span class="n">enemy</span><span class="p">,</span> <span class="n">weapon</span> <span class="p">)</span>
+    <span class="k">if</span> <span class="n">life</span> <span class="o">&lt;=</span> <span class="mi">0</span>
+      <span class="nb">puts</span> <span class="s2">"[</span><span class="si">#{</span> <span class="nb">self</span><span class="p">.</span><span class="nf">class</span> <span class="si">}</span><span class="s2"> is too dead to fight!]"</span>
+      <span class="k">return</span>
+    <span class="k">end</span>
+
+    <span class="c1"># Attack the opponent</span>
+    <span class="n">your_hit</span> <span class="o">=</span> <span class="nb">rand</span><span class="p">(</span> <span class="n">strength</span> <span class="o">+</span> <span class="n">weapon</span> <span class="p">)</span>
+    <span class="nb">puts</span> <span class="s2">"[You hit with </span><span class="si">#{</span> <span class="n">your_hit</span> <span class="si">}</span><span class="s2"> points of damage!]"</span>
+    <span class="n">enemy</span><span class="p">.</span><span class="nf">hit</span><span class="p">(</span> <span class="n">your_hit</span> <span class="p">)</span>
+
+    <span class="c1"># Retaliation</span>
+    <span class="nb">p</span> <span class="n">enemy</span>
+    <span class="k">if</span> <span class="n">enemy</span><span class="p">.</span><span class="nf">life</span> <span class="o">&gt;</span> <span class="mi">0</span>
+      <span class="n">enemy_hit</span> <span class="o">=</span> <span class="nb">rand</span><span class="p">(</span> <span class="n">enemy</span><span class="p">.</span><span class="nf">strength</span> <span class="o">+</span> <span class="n">enemy</span><span class="p">.</span><span class="nf">weapon</span> <span class="p">)</span>
+      <span class="nb">puts</span> <span class="s2">"[Your enemy hit with </span><span class="si">#{</span> <span class="n">enemy_hit</span> <span class="si">}</span><span class="s2"> points of damage!]"</span>
+      <span class="nb">self</span><span class="p">.</span><span class="nf">hit</span><span class="p">(</span> <span class="n">enemy_hit</span> <span class="p">)</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+
+<span class="k">end</span>
+
+<span class="k">class</span> <span class="nc">DwemthysArray</span> <span class="o">&lt;</span> <span class="no">Array</span>
+  <span class="k">alias</span> <span class="n">_inspect</span> <span class="nb">inspect</span>
+  <span class="k">def</span> <span class="nf">inspect</span><span class="p">;</span> <span class="s2">"#&lt;</span><span class="si">#{</span> <span class="nb">self</span><span class="p">.</span><span class="nf">class</span> <span class="si">}#{</span> <span class="n">_inspect</span> <span class="si">}</span><span class="s2">&gt;"</span><span class="p">;</span> <span class="k">end</span>
+  <span class="k">def</span> <span class="nf">method_missing</span><span class="p">(</span> <span class="n">meth</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span> <span class="p">)</span>
+    <span class="n">answer</span> <span class="o">=</span> <span class="n">first</span><span class="p">.</span><span class="nf">send</span><span class="p">(</span> <span class="n">meth</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span> <span class="p">)</span>
+    <span class="k">if</span> <span class="n">first</span><span class="p">.</span><span class="nf">life</span> <span class="o">&lt;=</span> <span class="mi">0</span>
+      <span class="n">shift</span>
+      <span class="k">if</span> <span class="n">empty?</span>
+        <span class="nb">puts</span> <span class="s2">"[Whoa. You decimated Dwemthy's Array!]"</span>
+      <span class="k">else</span>
+        <span class="nb">puts</span> <span class="s2">"[Get ready. </span><span class="si">#{</span> <span class="n">first</span><span class="p">.</span><span class="nf">class</span> <span class="si">}</span><span class="s2"> has emerged.]"</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+    <span class="n">answer</span> <span class="o">||</span> <span class="mi">0</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></figure>
+
+<p>This code adds two methods to <code>Creature</code>. The <code>hit</code> method which reacts to a hit
+from another <code>Creature</code>. And the <code>fight</code> method which lets you place your own
+blows against that <code>Creature</code>.</p>
+
+<p>When your <code>Creature</code> takes a hit, a bit of defense kicks in and your <code>charisma</code>
+value is used to generate a power-up. Don’t ask me to explain the secrets behind
+this phenomenon. A random number is picked, some simple math is done, and, if
+you’re lucky, you get a couple life points. <code>@life += p_up / 4</code>.</p>
+
+<p>Then, the enemy’s blow is landed. <code>@life -= damage</code>. That’s how the
+<code>Creature#hit</code> method works.</p>
+
+<p>The <code>fight</code> method checks to see if your <code>Creature</code> is alive. Next, a random hit
+is placed on your opponent. If your opponent lives through the hit, it gets a
+chance to strike back. Those are the workings of the <code>Creature#fight</code> method.</p>
+
+<p>I’ll explain <code>DwemthysArray</code> in a second. I really will. I’m having fun doing
+it. Let’s stick with hitting and fighting for now.</p>
+
+<h3>Introducing: You.</h3>
+
+<p>You may certainly tinker with derivations on this rabbit. But official Dwemthy
+Paradigms explicitly denote the code—and the altogether character—inscribed
+below. <strong>Save this as <code>rabbit.rb</code>.</strong></p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Rabbit</span> <span class="o">&lt;</span> <span class="no">Creature</span>
+  <span class="n">traits</span> <span class="ss">:bombs</span>
+
+  <span class="n">life</span> <span class="mi">10</span>
+  <span class="n">strength</span> <span class="mi">2</span>
+  <span class="n">charisma</span> <span class="mi">44</span>
+  <span class="n">weapon</span> <span class="mi">4</span>
+  <span class="n">bombs</span> <span class="mi">3</span>
+
+  <span class="c1"># little boomerang</span>
+  <span class="k">def</span> <span class="nf">^</span><span class="p">(</span> <span class="n">enemy</span> <span class="p">)</span>
+    <span class="n">fight</span><span class="p">(</span> <span class="n">enemy</span><span class="p">,</span> <span class="mi">13</span> <span class="p">)</span>
+  <span class="k">end</span>
+  <span class="c1"># the hero's sword is unlimited!!</span>
+  <span class="k">def</span> <span class="nf">/</span><span class="p">(</span> <span class="n">enemy</span> <span class="p">)</span>
+    <span class="n">fight</span><span class="p">(</span> <span class="n">enemy</span><span class="p">,</span> <span class="nb">rand</span><span class="p">(</span> <span class="mi">4</span> <span class="o">+</span> <span class="p">(</span> <span class="p">(</span> <span class="n">enemy</span><span class="p">.</span><span class="nf">life</span> <span class="o">%</span> <span class="mi">10</span> <span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="p">)</span> <span class="p">)</span> <span class="p">)</span>
+  <span class="k">end</span>
+  <span class="c1"># lettuce will build your strength and extra ruffage</span>
+  <span class="c1"># will fly in the face of your opponent!!</span>
+  <span class="k">def</span> <span class="nf">%</span><span class="p">(</span> <span class="n">enemy</span> <span class="p">)</span>
+    <span class="n">lettuce</span> <span class="o">=</span> <span class="nb">rand</span><span class="p">(</span> <span class="n">charisma</span> <span class="p">)</span>
+    <span class="nb">puts</span> <span class="s2">"[Healthy lettuce gives you </span><span class="si">#{</span> <span class="n">lettuce</span> <span class="si">}</span><span class="s2"> life points!!]"</span>
+    <span class="vi">@life</span> <span class="o">+=</span> <span class="n">lettuce</span>
+    <span class="n">fight</span><span class="p">(</span> <span class="n">enemy</span><span class="p">,</span> <span class="mi">0</span> <span class="p">)</span>
+  <span class="k">end</span>
+  <span class="c1"># bombs, but you only have three!!</span>
+  <span class="k">def</span> <span class="nf">*</span><span class="p">(</span> <span class="n">enemy</span> <span class="p">)</span>
+    <span class="k">if</span> <span class="vi">@bombs</span><span class="p">.</span><span class="nf">zero?</span>
+      <span class="nb">puts</span> <span class="s2">"[UHN!! You're out of bombs!!]"</span>
+      <span class="k">return</span>
+    <span class="k">end</span>
+    <span class="vi">@bombs</span> <span class="o">-=</span> <span class="mi">1</span>
+    <span class="n">fight</span><span class="p">(</span> <span class="n">enemy</span><span class="p">,</span> <span class="mi">86</span> <span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></figure>
+
+<p>You have four weapons. The boomerang. The hero’s sword. The lettuce. And the
+bombs.</p>
+
+<p>To start off, open up <code>irb</code> and load the libraries we’ve created above.</p>
+
+<pre><code>irb&gt; require 'dwemthy'
+irb&gt; require 'rabbit'
+</code></pre>
+
+<p>Now, unroll yourself.</p>
+
+<pre><code>irb&gt; r = Rabbit.new
+irb&gt; r.life
+  =&gt; 10
+irb&gt; r.strength
+  =&gt; 2
+</code></pre>
+
+<p>Good, good.</p>
+
+<h3>Rabbit Fights ScubaArgentine!</h3>
+
+<p>You cannot just go rushing into Dwemthy’s Array, unseatbelted and merely
+perfumed!! You must advance deliberately through the demonic cotillion. Or
+south, through the thickets and labyrinth of coal.</p>
+
+<p>For now, let’s lurk covertly through the milky residue alongside the aqueducts.
+And sneak up on the <code>ScubaArgentine</code>.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">ScubaArgentine</span> <span class="o">&lt;</span> <span class="no">Creature</span>
+  <span class="n">life</span> <span class="mi">46</span>
+  <span class="n">strength</span> <span class="mi">35</span>
+  <span class="n">charisma</span> <span class="mi">91</span>
+  <span class="n">weapon</span> <span class="mi">2</span>
+<span class="k">end</span></code></pre></figure>
+
+<p>To get the fight started, make sure you’ve created one of you and one of the <code>ScubaArgentine</code>.</p>
+
+<pre><code>irb&gt; r = Rabbit.new
+irb&gt; s = ScubaArgentine.new
+</code></pre>
+
+<p>Now use the little boomerang!</p>
+
+<pre><code>irb&gt; r ^ s
+[You hit with 2 points of damage!]
+#&lt;ScubaArgentine:0x808c864 @charisma=91, @strength=35, @life=44, @weapon=2&gt;
+[Your enemy hit with 28 points of damage!]
+[Rabbit has died.]
+</code></pre>
+
+<p>For crying out loud!! Our sample rabbit died!!</p>
+
+<aside class="sidebar">
+  <h2>The Shoes Which Lies Are Made Of</h2>
+
+  <p><em>Earlier, I told you that “The Inadvertant Meteor” was the only story you need
+to know in order to understand preeventualism. But, really, all you need to
+understand about preeventualism is that it is still in its infancy and any of
+its most basic concepts could change.</em></p>
+
+  <p><em>Which is why I’ve authored a competing story which I believe uncovers an
+entirely different and very relevant intellectual scenario.</em></p>
+
+  <p>There was a guy who had been around the block. And he wasn’t very old, so he
+decided to write a biography of his life.</p>
+
+  <p>Well, he started to lie in his biography. He made up some stories. But mostly
+little stories that were inconsequential. Filler. Like he had a story about a
+painting he’d done of a red background with elephant legs in front.</p>
+
+  <p>But he hadn’t ever painted anything of the sort. He further embellished the
+story by talking about a pricey auction he’d snuck into. An auction in New York
+City where he’d he overheard his painting go to sale for twenty grand. But that
+wasn’t the point of the story. The point was that he could fold his body to fit
+under a lid on a banquet tray. People would raise the lid and they wouldn’t even
+notice him bracing himself inside. He didn’t even mention the price his painting
+sold at.</p>
+
+  <p>Anyway, he really started to like that story (and others like it), to the point
+where he started to ignore his friends and family, instead preferring to watch
+what his lie self did after the auction. In his head.</p>
+
+  <p>So, then, one day he was shopping and he found a pair of shoes that had stripey
+laces. And he grabbed the shoes and went to the store counter, forcing them in
+the cashier’s face, yelling, “Look! Look at these! Look! These are the shoes my
+lie self would wear!” And he bought the shoes and put them on and the whole
+Earth cracked open and the cash register popped open and swallowed him up and he
+was suddenly elsewhere, in his lie apartment, sitting down to paint dolphin
+noses, three of them on a green background.</p>
+
+  <p>It was a lot of work, painting all those noses. And he went broke for a while
+and had to stoop so low as to filming abominable snowman <span class="caps">NASCAR</span>.</p>
+</aside>
+
+<p>Grim prospects. I can’t ask you to return to the rabbit kingdom, though. Just
+pretend like you didn’t die and make a whole new rabbit.</p>
+
+<pre><code>irb&gt; r = Rabbit.new
+
+# attacking with boomerang!
+irb&gt; r ^ s
+
+# the hero's sword slashes!
+irb&gt; r / s
+
+# eating lettuce gives you life!
+irb&gt; r % s
+
+# you have three bombs!
+irb&gt; r * s
+</code></pre>
+
+<p>Pretty neat looking, wouldn’t you say? The code in <code>rabbit.rb</code> alters a few math
+symbols which work only with the <code>Rabbit</code>. Ruby allows you to change the
+behavior of math operators. After all, <strong>math operators are just methods!</strong></p>
+
+<pre><code># the boomerang is normally an XOR operator.
+irb&gt; 1.^( 1 )
+  =&gt; 0
+
+# the hero's sword normally divides numbers.
+irb&gt; 10./( 2 )
+  =&gt; 5
+
+# the lettuce gives the remainder of a division.
+irb&gt; 10.%( 3 )
+  =&gt; 1
+
+# the bomb is for multiplication.
+irb&gt; 10.*( 3 )
+  =&gt; 30
+</code></pre>
+
+<p>Where it makes sense, you may choose to use math operators on some of your
+Classes. Ruby uses these math operators on many of its own classes. Arrays, for
+example, have a handful of math operators which you can see in the list of
+instance methods when you type: <code>ri Array</code>.</p>
+
+<pre><code># the plus operator combines two arrays into a single array
+irb&gt; ["D", "W", "E"] + ["M", "T", "H", "Y"]
+  =&gt; ["D", "W", "E", "M", "T", "H", "Y"]
+
+# minus removes all items in the second array found in the first
+irb&gt; ["D", "W", "E", "M", "T", "H", "Y"] - ["W", "T"]
+  =&gt; ["D", "E", "M", "H", "Y"]
+
+# the multiplier repeats the elements of an array
+irb&gt; ["D", "W"] * 3
+  =&gt; ["D", "W", "D", "W", "D", "W"]
+</code></pre>
+
+<p>You may be wondering: what does this mean for math, though? What if I add the
+number three to an array? What if I add a string and a number? <strong>How is Ruby
+going to react?</strong></p>
+
+<p>Please remember these operators are just methods. But, since these operators
+<em>aren’t readable words</em>, it can be harder to tell what they do. Use <code>ri</code>. Often
+you’ll find that the operators are identical to other readable methods. You can
+then choose to use the operator or the method. Whichever is clearer to you.</p>
+
+<pre><code># divide with an operator method ...
+irb&gt; 10 / 3
+  =&gt; 3
+
+# ... or a readable method?
+irb&gt; 10.div 3
+  =&gt; 3
+</code></pre>
+
+<p>And that’s how the Rabbit’s sword divides.</p>
+
+<h3>The Harsh Realities of Dwemthy’s Array <span class="caps">AWAIT YOU TO MASH YOU</span>!!</h3>
+
+<p>Once you’re done playchoking the last guy with his oxygen tube, it’s time to
+enter The Array. I doubt you can do it. You left your hatchet at home. And I
+hope you didn’t use all your bombs on the easy guy.</p>
+
+<p>You have six foes.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">IndustrialRaverMonkey</span> <span class="o">&lt;</span> <span class="no">Creature</span>
+  <span class="n">life</span> <span class="mi">46</span>
+  <span class="n">strength</span> <span class="mi">35</span>
+  <span class="n">charisma</span> <span class="mi">91</span>
+  <span class="n">weapon</span> <span class="mi">2</span>
+<span class="k">end</span>
+
+<span class="k">class</span> <span class="nc">DwarvenAngel</span> <span class="o">&lt;</span> <span class="no">Creature</span>
+  <span class="n">life</span> <span class="mi">540</span>
+  <span class="n">strength</span> <span class="mi">6</span>
+  <span class="n">charisma</span> <span class="mi">144</span>
+  <span class="n">weapon</span> <span class="mi">50</span>
+<span class="k">end</span>
+
+<span class="k">class</span> <span class="nc">AssistantViceTentacleAndOmbudsman</span> <span class="o">&lt;</span> <span class="no">Creature</span>
+  <span class="n">life</span> <span class="mi">320</span>
+  <span class="n">strength</span> <span class="mi">6</span>
+  <span class="n">charisma</span> <span class="mi">144</span>
+  <span class="n">weapon</span> <span class="mi">50</span>
+<span class="k">end</span>
+
+<span class="k">class</span> <span class="nc">TeethDeer</span> <span class="o">&lt;</span> <span class="no">Creature</span>
+  <span class="n">life</span> <span class="mi">655</span>
+  <span class="n">strength</span> <span class="mi">192</span>
+  <span class="n">charisma</span> <span class="mi">19</span>
+  <span class="n">weapon</span> <span class="mi">109</span>
+<span class="k">end</span>
+
+<span class="k">class</span> <span class="nc">IntrepidDecomposedCyclist</span> <span class="o">&lt;</span> <span class="no">Creature</span>
+  <span class="n">life</span> <span class="mi">901</span>
+  <span class="n">strength</span> <span class="mi">560</span>
+  <span class="n">charisma</span> <span class="mi">422</span>
+  <span class="n">weapon</span> <span class="mi">105</span>
+<span class="k">end</span>
+
+<span class="k">class</span> <span class="nc">Dragon</span> <span class="o">&lt;</span> <span class="no">Creature</span>
+  <span class="n">life</span> <span class="mi">1340</span>     <span class="c1"># tough scales</span>
+  <span class="n">strength</span> <span class="mi">451</span>  <span class="c1"># bristling veins</span>
+  <span class="n">charisma</span> <span class="mi">1020</span> <span class="c1"># toothy smile</span>
+  <span class="n">weapon</span> <span class="mi">939</span>    <span class="c1"># fire breath</span>
+<span class="k">end</span></code></pre></figure>
+
+<p>These are the living, breathing monstrosities of Dwemthy’s Array. I don’t know
+how they got there. No one knows. Actually, I’m guessing the
+<code>IntrepidDecomposedCyclist</code> rode his ten-speed. But the others: <span class="caps">NO ONE</span> knows.</p>
+
+<p>If it’s really important for you to know, let’s just say the others were born
+there. Can we move on??</p>
+
+<p>As Dwemthy’s Array gets deeper, the challenge becomes more difficult.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">dwary</span> <span class="o">=</span> <span class="no">DwemthysArray</span><span class="p">[</span><span class="no">IndustrialRaverMonkey</span><span class="p">.</span><span class="nf">new</span><span class="p">,</span>
+                      <span class="no">DwarvenAngel</span><span class="p">.</span><span class="nf">new</span><span class="p">,</span>
+                      <span class="no">AssistantViceTentacleAndOmbudsman</span><span class="p">.</span><span class="nf">new</span><span class="p">,</span>
+                      <span class="no">TeethDeer</span><span class="p">.</span><span class="nf">new</span><span class="p">,</span>
+                      <span class="no">IntrepidDecomposedCyclist</span><span class="p">.</span><span class="nf">new</span><span class="p">,</span>
+                      <span class="no">Dragon</span><span class="p">.</span><span class="nf">new</span><span class="p">]</span></code></pre></figure>
+
+<p>Fight the Array and the monsters will appear as you go. Godspeed and may you
+return with harrowing tales and nary an angel talon piercing through your
+shoulder.</p>
+
+<p>Start here:</p>
+
+<pre><code>irb&gt; r % dwary
+</code></pre>
+
+<p>Oh, and none of this “I’m too young to die” business. I’m sick of that crap. I’m
+not going to have you insulting our undead young people. They are our future.
+After our future is over, that is.</p>
+
+<p><img src="../images/wixl.dwemthy-3.gif" alt="The rabbit has changed us." title="The rabbit has changed us." /></p>
+
+<h3>The Making of Dwemthy’s Array</h3>
+
+<p>Fast forward to a time when the winds have calmed. The dragon is vanquished. The
+unwashed masses bow. We love you. We are loyal to you.</p>
+
+<p>But what is this centipede nibbling in your eardrum? You dig with your finger,
+but you can’t get him out! Blasted! It’s that infernal Dwemthy’s Array again.
+<strong>Explain yourself Dwemthy!</strong></p>
+
+<p>Here, I shall unmask the Array itself for you.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">DwemthysArray</span> <span class="o">&lt;</span> <span class="no">Array</span>
+  <span class="k">alias</span> <span class="n">_inspect</span> <span class="nb">inspect</span>
+  <span class="k">def</span> <span class="nf">inspect</span><span class="p">;</span> <span class="s2">"#&lt;</span><span class="si">#{</span> <span class="nb">self</span><span class="p">.</span><span class="nf">class</span> <span class="si">}#{</span> <span class="nb">inspect</span> <span class="si">}</span><span class="s2">&gt;"</span><span class="p">;</span> <span class="k">end</span>
+  <span class="k">def</span> <span class="nf">method_missing</span><span class="p">(</span> <span class="n">meth</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span> <span class="p">)</span>
+    <span class="n">answer</span> <span class="o">=</span> <span class="n">first</span><span class="p">.</span><span class="nf">send</span><span class="p">(</span> <span class="n">meth</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span> <span class="p">)</span>
+    <span class="k">if</span> <span class="n">first</span><span class="p">.</span><span class="nf">life</span> <span class="o">&lt;=</span> <span class="mi">0</span>
+      <span class="n">shift</span>
+      <span class="k">if</span> <span class="n">empty?</span>
+        <span class="nb">puts</span> <span class="s2">"[Whoa.  You decimated Dwemthy's Array!]"</span>
+      <span class="k">else</span>
+        <span class="nb">puts</span> <span class="s2">"[Get ready. </span><span class="si">#{</span> <span class="n">first</span><span class="p">.</span><span class="nf">class</span> <span class="si">}</span><span class="s2"> has emerged.]"</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+    <span class="n">answer</span> <span class="o">||</span> <span class="mi">0</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></figure>
+
+<p>By now, you’re probably feeling very familiar with inheritance. The
+<code>DwemthysArray</code> class inherits from <code>Array</code> and, thus, behaves just like one.
+For being such a mystery, it’s alarmingly brief, yeah?</p>
+
+<p>So it’s an Array. Filled with monsters. But what does this extra code do?</p>
+
+<h3>Inspect</h3>
+
+<p>The <code>inspect</code> method isn’t really a necessary part of Dwemthy’s Array. It’s
+something Dwemthy added as a courtesy to his guests. (Many call him twisted,
+many call him austere, but we’d all be ignorant to go without admiring the
+footwork he puts in for us.)</p>
+
+<p>Every object in Ruby has an <code>inspect</code> method. It is defined in the <code>Object</code>
+class, so it trickles down through the pedigree to every wee child object just
+born.</p>
+
+<pre><code>irb&gt; o = Object.new
+  =&gt; #&lt;Object:0x81d60c0&gt;
+irb&gt; o.inspect
+  =&gt; "#&lt;Object:0x81d60c0&gt;"
+</code></pre>
+
+<p>Have you noticed this? Whenever we create an object in <code>irb</code>, this noisy
+<code>#&lt;Object&gt;</code> verbage stumbles out! It’s a little name badge for the object. The
+<code>inspect</code> method creates that name badge. The badge is just a string.</p>
+
+<pre><code>irb&gt; class Rabbit
+irb&gt;   attr_accessor :slogan
+irb&gt;   def initialize s; @slogan = s; end
+irb&gt;   def inspect; "#&lt;#{ self.class } says '#{ @slogan }'&gt;"; end
+irb&gt; end
+
+irb&gt; class FakeRabbit &lt; Rabbit
+irb&gt; end
+
+irb&gt; Rabbit.new "i blow'd the drgn's face off!!" 
+  =&gt; #&lt;Rabbit says 'i blow'd the drgn's face off!!'&gt;
+irb&gt; FakeRabbit.new "Thusly and thusly and thusly..." 
+  =&gt; #&lt;FakeRabbit says 'Thusly and thusly and thusly...'&gt;
+</code></pre>
+
+<p>The thing is: <code>irb</code> is talking back. Every time you run some code in <code>irb</code>, the
+<em>return value</em> from that code is inspected. How handy. It’s a little
+conversation between you and <code>irb</code>. And <code>irb</code> is just reiterating what you’re
+saying so you can see it for your self.</p>
+
+<p>You could write your own Ruby prompt very easily:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="kp">loop</span> <span class="k">do</span>
+  <span class="nb">print</span> <span class="s2">"&gt;&gt; "</span>
+  <span class="nb">puts</span>  <span class="s2">"=&gt; "</span> <span class="o">+</span> <span class="nb">eval</span><span class="p">(</span> <span class="nb">gets</span> <span class="p">).</span><span class="nf">inspect</span>
+<span class="k">end</span></code></pre></figure>
+
+<p>This prompt won’t let you write Ruby code longer than a single line. It’s the
+essence of interactive Ruby, though. How do you like that? Two of your recently
+learned concepts have come together in a most flavorful way. The <code>eval</code> takes
+the typed code and runs it. The response from <code>eval</code> is then inspected.</p>
+
+<p>Now, as you are fighting monsters in <code>irb</code>, Dwemthy’s Array will be inspected
+and reply with the monsters you have left to fight.</p>
+
+<p><img src="../images/wixl-5.gif" alt="The foxes eat out." title="The foxes eat out." /></p>
+
+<h3>Method Missing</h3>
+
+<p>Don’t you hate it when you yell “Deirdre!” and like ten people answer? That
+<em>never</em> happens in Ruby. If you call the <code>deirdre</code> method, only one <code>deirdre</code>
+method answers. You can’t have two methods named the same. If you add a second
+<code>deirdre</code> method, the first one disappears.</p>
+
+<p>You can, however, have a method which <strong>answers to many names</strong>.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">NameCaller</span>
+  <span class="k">def</span> <span class="nf">method_missing</span><span class="p">(</span> <span class="nb">name</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span> <span class="p">)</span>
+    <span class="nb">puts</span> <span class="s2">"You're calling `</span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">' and you say:"</span>
+    <span class="n">args</span><span class="p">.</span><span class="nf">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">say</span><span class="o">|</span> <span class="nb">puts</span> <span class="s2">"  "</span> <span class="o">+</span> <span class="n">say</span> <span class="p">}</span>
+    <span class="nb">puts</span> <span class="s2">"But no one is there yet."</span>
+  <span class="k">end</span>
+  <span class="k">def</span> <span class="nf">deirdre</span><span class="p">(</span> <span class="o">*</span><span class="n">args</span> <span class="p">)</span>
+    <span class="nb">puts</span> <span class="s2">"Deirdre is right here and you say:"</span>
+    <span class="n">args</span><span class="p">.</span><span class="nf">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">say</span><span class="o">|</span> <span class="nb">puts</span> <span class="s2">"  "</span> <span class="o">+</span> <span class="n">say</span> <span class="p">}</span>
+    <span class="nb">puts</span> <span class="s2">"And she loves every second of it."</span>
+    <span class="nb">puts</span> <span class="s2">"(I think she thinks you're poetic.)"</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></figure>
+
+<p>When you call the method <code>deirdre</code> above, I’m sure you know what will happen.
+Deirdre will love every second of it, you and your dazzling poetry.</p>
+
+<p>But what if you call <code>simon</code>?</p>
+
+<pre><code>irb&gt; NameCaller.new.simon( 'Hello?', 'Hello? Simon?' )
+You're calling `simon' and you say:
+  Hello?
+  Hello? Simon?
+But no one is there yet.
+</code></pre>
+
+<p>Yes, <code>method_missing</code> is like an answering machine, which intercepts your method
+call. In Dwemthy’s Array we use call forwarding, so that when you attack the
+Array, it passes that attack on straight to the first monster in the Array.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">method_missing</span><span class="p">(</span> <span class="n">meth</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span> <span class="p">)</span>
+  <span class="n">answer</span> <span class="o">=</span> <span class="n">first</span><span class="p">.</span><span class="nf">send</span><span class="p">(</span> <span class="n">meth</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span> <span class="p">)</span>
+  <span class="c1"># ... snipped code here ...</span>
+<span class="k">end</span></code></pre></figure>
+
+<p>See! See! That skinny little <code>method_missing</code> passes the buck!</p>
+
+<p><a name="section4"></a></p>
+
+<h2>4. So, Let’s Be Clear: The Porcupine Is Now To The Sea</h2>
+
+<p><img src="../images/porcupine-2.gif" alt="The porcupine and his kite." title="The porcupine and his kite." /></p>
+
+<p><a name="section5"></a></p>
+
+<h2>5. Walking, Walking, Walking, Walking and So Forth</h2>
+
+<p>The evening grew dark around the pair of foxes. They had wound their way through
+alleys packed with singing possums, and streets where giraffes in rumpled
+sportscoats bumped past them with their briefcases. They kept walking.</p>
+
+<p>And now the stores rolled shut their corrugated metal lids. Crickets crawled out
+from the gutters and nudged at the loose change.</p>
+
+<p><img src="../images/wixl-6.gif" alt="Why such hard feelings?" title="Why such hard feelings?" /></p>
+
+<p>“Anyway, you must admit he’s a terrible President,” said Fox Small. <em>“Why</em> does
+President Marcos have a rabbit as Vice President of the Foxes.”</p>
+
+<p>“The Vice President? The rabbit with the <em>eyebrows</em>?”</p>
+
+<p>“No, the rabbit with the <strong>huge sausage lips</strong>,” said Fox Small.</p>
+
+<p>But their conversation was abruptly interrupted by a freckly cat head which
+popped from the sky just above the sidewalk.</p>
+
+<p><img src="../images/wixl.blix-1.gif" alt="At least they're still in the book..." title="At least they're still in the book..." /></p>
+
+<p>What is this about?!</p>
+
+<p><img src="../images/wixl-14.gif" alt="Will the book finish?" title="Will the book finish?" /></p>
+
+<p>Oh, come on. This is rich. More meta.</p>
+
+<p>I’m not going to bother illustrating this discussion Blixy had with the foxes at
+this point! It’s all a <strong>bunch of <em>conjecture</em></strong>. <em><span class="caps">HOW</span></em> can they presume to know the landscape of my family
+drama? I love my sister. For a long time, I <em>worshipped</em> her. (This is my sister
+Quil.)</p>
+
+<p>I admit that there was a pretty painful day a few months ago and I kind of
+freaked out. I was laid out on the long patio chair by the pool in my mom’s
+backyard. I had a Dr. Pepper and a bit of German chocolate cake. I was eating
+with a kid fork. Everything else was in the dishwasher, that’s all they had.
+Three prongs.</p>
+
+<p>My mom started talking about Quil. All about how much money she was blowing on
+pants and purses. A five-hundred dollar purse. And then she said, “She’s losing
+it. She sounded totally high on the phone.” (She nailed it on the head, Quil was
+smoking dope and loving it.)</p>
+
+<p>So I’d been noticing how observant my mom could be. That’s why, when she said,
+“I actually think she’s on cocaine,” I <em>physically</em> stood up and chucked my soda
+across the yard.</p>
+
+<p>It sailed off into the woods somewhere. We had been talking awhile, so it was
+dark when the can flew. I paced a bit. And then I screamed at the top of my
+lungs.</p>
+
+<p>My uncle Mike was standing there with the glass door open, staring at me. He
+said something totally nervous like, “Oh, okay. Well, I’ll—” And the tea in his
+glass was swishing back and forth, sloshing all over. He disappeared. He’s not
+very good at saying things to people. He’s more of a whistler. And resonant.</p>
+
+<p><img src="../images/wixl.blix-2.gif" alt="Moving along." title="Moving along." /></p>
+
+<p>So, to be completely honest, yes, I got a little mad. I got mad. You know. I
+dealt with it. Quil calls me regularly. For some stupid reason, I rarely call
+her.</p>
+
+<p>Plus, she didn’t end up killing herself. So it’s just not an issue. Who knows if
+it was real. She just had a lot of vodka. And she’s little. So it was just scary
+to see Quil guzzling it down like that. I mean forcing it down.</p>
+
+<p>But why talk about it? It’ll just make her feel like I’m disappointed. Or like
+I’m a jerk.</p>
+
+<p>Well, I got off track there a bit. Where was I? Blix is basically helping the
+foxes around, getting them on the trail of their truck. Yeah, back to all that.</p>
+
+<p><img src="../images/wixl-3.gif" alt="Frogs who save seats on the bus." title="Frogs who save seats on the bus." /></p>
+
+<p>“We can’t squeeze on to this bus,” said the smallest fox.</p>
+
+<p>“Guys, walk on up,” said Blix. “What’s the hold up? Oh, the frogs. Yeah, just
+squeeze through.” Blixy pushed from behind.</p>
+
+<p>“Hey,” said the Tall Fox. “I’m crammed on this little step! Somebody move!”</p>
+
+<p>“Did you get through—young fox??” said the cat.</p>
+
+<p>“No,” said Fox Small, “can’t you see? The driver keeps shaking his head and it’s
+<em>really</em> making me nervous. I don’t think he wants us on.”</p>
+
+<p>“Go,” said Blix. He stepped down from his step and walked around the bus,
+peering through the plexiglass windows. “Well, I don’t know, guys. I dunno. I
+guess it’s got a lot of frogs.” He pounded on the window. “Hey! Move over!”</p>
+
+<p>And that’s the reality of riding intercity transit in Wixl. It’s terribly
+competitive. The morning bus is so crowded that most white collar animals get
+frogs to hold their seat through the nighttime. For whatever reason, it works.
+It’s become this staple of their workflow and their economy.</p>
+
+<p>If you can muster up a bit of imagination, you can see a <strong>percent sign</strong> as a
+frog’s slanted face. Got the picture in your head? Now let me show you frogs
+that camp out inside strings.</p>
+
+<pre><code># The %s format is for placing full strings.
+irb&gt; "Seats are taken by %s and %s." % ['a frog', 'a frog with teeth']
+  =&gt; "Seats are taken by a frog and a frog with teeth." 
+
+# The %d format is for placing numbers, while the %f format is for
+# floats (decimal numbers).
+irb&gt; frogs = [44, 162.30]
+irb&gt; stats = "Frogs have filled %d seats and paid %f blue crystals." 
+irb&gt; stats % frogs
+  =&gt; "Frogs have filled 44 seats and paid 162.30 blue crystals." 
+
+# Formatting is flexible with types, you can pass in strings
+# and format them like numbers.
+irb&gt; frogs = ['44', '162.30']
+irb&gt; stats % frogs
+  =&gt; "Frogs have filled 44 seats and paid 162.30 blue crystals."
+</code></pre>
+
+<p>What you are seeing above uses the <code>%</code> method in the <code>String</code> class. This method
+takes <strong>a string</strong> and <strong>an array</strong> and slurps them in together to create a new
+string. The items from the list are yanked out (in order) and placed in their
+saved seats. It’s the open of the business day and the frogs have done their
+job.</p>
+
+<pre><code># See, here's the String#% method called like other methods.
+irb&gt; "Please move over, %s.".%( 'toothless frog' )
+  =&gt; "Please move over, toothless frog" 
+
+# Now let's call it the prettier way, with the percent sign
+# right between the string and the array.
+irb&gt; "Here is your 1098 statement for the year, %s." % ['teeth frog']
+  =&gt; "Here is your 1098 statement for the year, teeth frog."
+</code></pre>
+
+<p>This is also available as the <code>Kernel::format</code> method or <code>Kernel::sprintf</code>
+method. (In the C language, there is a <code>sprintf</code> method which operates just like
+this.)</p>
+
+<pre><code>irb&gt; format "Frogs are piled %d deep and travel at %d mph.", [5, 56]
+  =&gt; "Frogs are piled 5 deep and travel at 56 mph."
+</code></pre>
+
+<p>For the most part, you’ll only need <code>%s</code> (strings), <code>%d</code> (integer numbers) or
+<code>%f</code> (float numbers) format specifiers. The <code>%p</code> placeholder will run <code>inspect</code>
+on an object.</p>
+
+<p>Yeah, so, frog formatting is really handy for building strings that are
+assembled from different kinds of data. You can learn all the various kinds of
+format specifiers by reading the <code>ri sprintf</code> page. I’m just going to give you a
+few quick pointers.</p>
+
+<p>Let’s say you have the array but you want the items to appear in <strong>a different
+order</strong> in the string. In such a situation, you can identify specific items by
+placing a number (<code>1$</code> for the first item, <code>2$</code> for the second, and so on) right
+after the percent sign.</p>
+
+<pre><code>irb&gt; "This bus has %1$d more stops before %2$d o'clock.  That's %1$d more stops." % [16, 8]
+  =&gt; "This bus has 16 more stops before 8 o'clock.  That's 16 more stops."
+</code></pre>
+
+<p>The second tip I have for you is that you can allot a certain number of
+characters for each item, a width. And if an item is smaller than the width,
+extra spaces will be used before the item, to pad it. If the width is a negative
+number, the item will be forced to left and the padding will come after it.</p>
+
+<pre><code># Give one item 30 characters of width
+irb&gt; "In the back of the bus: %30s." % ['frogs']
+  =&gt; "In the back of the bus:                          frogs." 
+
+# Give one left-justified item 30 characters of width
+irb&gt; "At the front of the bus: %-30s." % ['frogs']
+  =&gt; "At the front of the bus: frogs                         ."
+</code></pre>
+
+<p>Fox Small kept looking up at the bus driver. Remember, he wouldn’t enter the
+bus!</p>
+
+<p>“What’s the deal?” said Fox Tall. “Can’t you just get on and we’ll just stand in
+the aisle?”</p>
+
+<p>“You really want to get on this bus? That driver has no hands,” said Fox Small,
+speaking close and hushed to Fox Tall, “and all he has, instead of hands, are
+sucker cups.”</p>
+
+<aside class="sidebar">
+  <h2>More From The Chilling Ongoing Preview of The Scarf Eaters</h2>
+
+  <p>(<em>from Chapter <span class="caps">XII</span>: Thank Heaven for Little Men</em>.)</p>
+
+  <p>“Close the door,” Spencer repeated, but Lara’s hand trembled and she fumbled
+sloppily at the latch. Her dad hadn’t taught her to close doors like this one.</p>
+
+  <p>“Yes, it’s an unusual door,” said Brent. He walked over and closed the door for
+her. Then, he held her hand and looked into her eyes. His eyes lit up like huge
+matchsticks that would be too huge to be practical. “It’s an unusual handle,
+which ensures that those who don’t eat scarves stay out.”</p>
+
+  <p>“Sit down, everyone,” Spencer demanded, as he bounded across the room and took
+command. “I command this organization,” he stated. “The secret organization of
+The Scarf Eaters!”</p>
+
+  <p>The torches encircling the room blazed like invincibly huge matches and the
+handful of teenagers sat. Except for Spencer who stood high and mighty, drawing
+all the oxygen in the entire room into his nostrils before speaking.</p>
+
+  <p>“One of us,” he said, dramatically and invincibly, “is missing!”</p>
+
+  <p>The entire room gasped, which also used oxygen. The room was abuzz. “Who?”
+“How?” “Who was it?” Nobody knew. Except for Spencer, who leapt across the room
+and took charge.</p>
+
+  <p>“Our dear friend Steve Bridell has been stolen from us,” announced Spencer in a
+deafeningly loud voice, as if thousands of giant matchsticks were struck against
+a brittle surface in unison amidst a pile of oxygen. “Steve Bridell. Do any of
+you know Steve Bridell?”</p>
+
+  <p>The hall was silent.</p>
+
+  <p>Spencer continued. “Steve Bridell was an incredible resource and you all knew
+him and loved him. He carved this enormous wooden man we use as our podium.”
+Spencer pointed. “He also made the set of wooden cymbals that are back in our
+instrument closet right now.”</p>
+
+  <p>Some of the audience stood.</p>
+
+  <p>“Wait,” instructed Spencer. “Don’t go back there. I’ve already checked. The
+cymbals are gone!”</p>
+</aside>
+
+<p>“So what? You don’t think animals with tentacles can drive?”</p>
+
+<p>“Well, not only is he going to flub up the steering wheel but he has all these
+legs all over the foot pedals. This is not smart. Let’s get another bus. Come
+on.”</p>
+
+<p>“You know, he’s probably been driving like that all day. Is he really going to
+start crashing at this point in his career?”</p>
+
+<p>“Buses do crash,” said Fox Small. “Some do. This smells crashworthy.”</p>
+
+<p>“Sheer doo-doo!” And Fox Tall yelled to the driver, “Hey, cabby, how long have
+you been driving this bus for?”</p>
+
+<p>The bus driver peered over darkly under his cap and started to turn toward them,
+but his tentacles were stuck to the wheel. He jerked swiftly at his forelegs
+and, failing their release, he turned to the wheel and focused his energies on
+milking his glands for some slicker secretions. Bubbles of mucus oozed.</p>
+
+<p>“Let’s get outta here,” said Fox Tall and the two ran off into the street,
+slamming right into the cat Blix.</p>
+
+<p>“Alright, well, the bus is full,” said Blix. “I don’t know why the driver
+stopped if he knew the bus was crammed with hoppers.”</p>
+
+<p>“We’re thinking he was about to crash into us,” said Fox Tall, “and he opened
+the door to make it look like a planned route stop.”</p>
+
+<p>“Keep in mind, Blix, we hadn’t really discussed that possibility out loud, so I
+haven’t had a chance to formally agree,” said Fox Small. “Nevertheless, it
+sounds rational to me.”</p>
+
+<p>“I’m thinking all the buses are going to be full like this.” Blix bit his lip,
+thinking and flicking his eyes about. “Let’s just—”  He pointed down the
+circuitry of apartment buildings that wound to the south.  “But maybe—” He
+looked up and surveyed the stars, scratching his head and counting the
+constellations with very small poking motions from the tip of his finger.</p>
+
+<p>“Are you getting our bearings from the stars and planets?” asked Fox Small.</p>
+
+<p>Blix didn’t speak, he ducked off to the north through a poorly laid avenue back
+behind the paint store. But before we follow them down that service road,
+Smotchkkiss, I have one more frog for you, perched on a long lilypad that
+stretches out to hold anything at all.</p>
+
+<pre><code>irb&gt; cat = "Blix"
+irb&gt; puts "Does #{ cat } see what's up?  Is #{ cat } aware??"
+  =&gt; "Does Blix see what's up?  Is Blix aware??"
+</code></pre>
+
+<p>The little frogs from earlier (<code>%s</code> or <code>%d</code>) were only placeholders for single
+strings. Saving places in the string.</p>
+
+<p>The lilypads above start with a flower bud, the <strong>octothorpe</strong>. You’ve also seen
+it as a pound sign on telephones. After the flower bud, two leaves form the
+edges of the lilypad. The leaves are <strong>curly braces</strong>, also seen many times
+before as the <em>crab pincers</em> for a code block.</p>
+
+<p>An empty lilypad <code>"#{}"</code> becomes an empty string <code>""</code>.</p>
+
+<p>When the lilypad is found in a <strong>double-quoted</strong> string, Ruby runs any code
+found in between the two leaves of the lilypad. The lilypad is lifted out and
+the result of the code is placed there in the string. This lilypad swap is
+called <em>string interpolation</em>.</p>
+
+<pre><code>irb&gt; fellows = ['Blix', 'Fox Tall', 'Fox Small']
+irb&gt; puts "Let us follow #{ fellows.join ' and ' } on their journey." 
+  =&gt; "Let us follow Blix and Fox Tall and Fox Small on their journey."
+</code></pre>
+
+<p>The lilypad is very durable and can hold any kind of code inside. Above we are
+using <code>Array#join</code>, but you can do anything you like inside. Call object
+methods, conditional <code>if</code> or <code>case</code> statements, even define classes.</p>
+
+<pre><code>irb&gt; blix_went = :north
+irb&gt; puts "Blix didn't speak, he ducked off to the #{ blix_went } through #{
+            if blix_went == :north
+              'a poorly laid avenue behind the paint store'
+            elsif blix_went == :south
+              'the circuitry of apartment buildings'
+            else
+              '... well, who knows where he went.'
+            end }.  But before we follow them..." 
+=&gt; "Blix didn't speak, he ducked off to the north through a poorly laid avenue
+    behind the paint store.  But before we follow them..."
+</code></pre>
+
+<p>The foxes followed Blixy off behind the paint store and down the cracked, uneven
+asphalt. All of the stores on the dilapidated lane leaned at angles to each
+other. In some places, slabs of sidewalk jutted up from the ground, forming a
+perilous walkway, a disorderly stack of ledges. Almost as if the city planners
+had hoped to pay tribute to the techtonic plates. One small drug store had slid
+below the surface, nearly out of eyesight.</p>
+
+<p>Truly, it was colorful, though. The paint store had been tossing out old paints
+directly onto its neighbors. The shops nearest the paint store were clogged with
+hundreds of colors, along the windowsills and in the rain gutters. Yes, on the
+walls and pavement.</p>
+
+<p>Basically, beginning with the back porch of the paint store, the avenue erupted
+into a giant incongruous and poorly-dyed market.</p>
+
+<p>Further down, a dentist’s office was primed with red paint and, over that, a
+fledgling artist had depicted a large baby who had fallen through a chimney and
+arrived in a fireplace full of soot. Crude black strokes marked the cloud of
+ashes raised during impact, easily mistaken for thick hair on the child’s arms
+and back. The child looked far too young to have much hair, but there they were:
+rich, blonde curls which toppled liberally from the child’s head. Under the
+child’s legs was painted the word <em><span class="caps">BREWSTER</span></em>.</p>
+
+<p>The same artist had hit the library next store and had hastily slapped together
+a mural of a green sports car being pulled from the mud by a team of legless
+babies tugging with shiny chains. Again, the drastically blonde curls!</p>
+
+<p>“I need answers,” said the Fox Tall, who had ground to a halt in front of the
+scenery.</p>
+
+<p>“I’m starting to believe there’s no such thing,” said Fox Small. “Maybe these
+are the answers.”</p>
+
+<p>“Brewster?” said Fox Tall. He walked nearer to the library and touched the cheek
+of one of the legless children who was closer in perspective. The child’s cheek
+appeared to contain a myriad of jawbones.</p>
+
+<p>Blix was another two houses down, navigating through the askew brickwork, the
+paved gully that led to <em>R.K.’s Gorilla Mint</em>, as the metallic sticker on the
+door read. The building was plastered with miniature logos for the variety of
+payment options and identification acceptable at <em>R.K.’s Gorilla Mint</em>. Even the
+bars over the window were lined with insurance disclosures and security warnings
+and seals of government authorization, as well as addendums to all of these,
+carbon paper covering stickers covering torn posters and advertising. And all
+mingled with paint splashes that intruded wherever they pleased.</p>
+
+<p><img src="../images/wixl-9.gif" alt="R.K.'s Gorilla Mint." title="R.K.'s Gorilla Mint." /></p>
+
+<p>“I like the way the fresh paper feels against my tongue,” said the gorilla at
+the counter. His fingers rubbed quietly against the bills. He drew his face near
+to the fanned currency and whisked his nose along the pulpy cash.</p>
+
+<p>“Is R.K. in this evening?” asked Blix.</p>
+
+<p>“R.K. is not,” said the gorilla cashier. He turned to the three travelers and
+spread his money out on the counter’s surface, evenly spacing them apart and
+lining up all the edges neatly. “Now, which one of these do you think is worth
+the most?”</p>
+
+<p>The foxes looked over the different bills and Fox Small muttered to himself,
+“Well, maybe—no, but I’ll bet—Wait, does one of these have bananas on it? ‘Cause
+that one—nope, no fruit or rope swings or—Terrible, this is difficult!” And in a
+lower voice, “So difficult to read. What does this one say? Symbols or
+something? If all these bills have are symbols, it’s going to be impossible for
+us to figure out which one is of the greatest value.”</p>
+
+<p>“That’s why I said, ‘<em>Guess</em>.’” The gorilla tapped each bill in order. “See,
+you’ve got a 1 in 5 chance.”</p>
+
+<p>“Unless the symbols mean something,” said Fox Tall. “Unless we can figure it
+out.”</p>
+
+<p>“We can figure it out,” said Fox Small.</p>
+
+<p>“No,” said the gorilla. “The symbols are meaningless.”</p>
+
+<p>“Whoever created the money intended some meaning for them,” said Fox Small. “Why
+use <em>this</em> symbol?” He pointed to an ampersand printed in dark ink.</p>
+
+<p>“Yeah, we saw you sniffing the money and fantasizing about it back there,” said
+Fox Tall. “I’ll bet these symbols mean all kinds of things to you!”</p>
+
+<p>“No, I don’t think so,” said the gorilla.</p>
+
+<p>If I can weigh in at this point, I think the symbols do have meaning. They may
+not be <em>loaded</em> with meaning, it may not be oozing out through the cracks, but
+I’m sure there’s a sliver of meaning.</p>
+
+<pre><code>irb&gt; $:
+  =&gt; ["/usr/lib/ruby/site_ruby/1.8", "/usr/lib/ruby/site_ruby/1.8/i686-linux",
+      "/usr/lib/ruby/site_ruby", "/usr/lib/ruby/1.8",
+      "/usr/lib/ruby/1.8/i686-linux"]
+</code></pre>
+
+<p>Variables which start with the American cash sign are global variables. They can
+be seen from anywhere in the program, <strong>from inside any scope</strong>. (Dr. Cham used
+this variable while snooping around The Originals’ computer bay.)</p>
+
+<p>So why does the <strong>cash sign followed by a colon</strong> represent an array of <strong>all
+directories where Ruby will search when you try to load a file with <code>require</code></strong>?
+The cash sign means “global.” But why the colon?</p>
+
+<p>Historically, on many operating systems, a list of directories contains colons
+which separated each entry. I like to see the colon as a pair of eyes, scanning
+the directories for files. We store our lookout list behind the eyes.</p>
+
+<p>Here’s a few more special global variables:</p>
+
+<pre><code>irb&gt; $"      # The $" variable contains all files which have been loaded with `require'
+  =&gt; ["irb.rb", "e2mmap.rb", "irb/init.rb", ... "rbconfig.rb"]
+             # These files are stored somewhere else, but their code is being used
+             # in this program.  Much like quoting someone else's work -- these are the
+             # footnotes -- hence the double-quote.
+
+irb&gt; $0      # The $0 variable contains the running program's filename.
+  =&gt; "irb"   # A zero can be considered the beginning of a number count.
+             # This variable answers the question, "Where did this program begin?" 
+
+irb&gt; $*      # The $* variable contains all the arguments passed into a program.
+  =&gt; ['--prompt', 'simple']
+             # This one is easy to remember, if you remember that Ruby methods
+             # also use the asterisk to capture arguments into an array.
+
+# The $! contains the current exception raised.
+# The exclamation indicates a state of alarm.  An exception!
+irb&gt; begin
+irb&gt;   raise TypeError, "I don't believe this information." 
+irb&gt; rescue
+irb&gt;   p $!
+irb&gt; end
+  =&gt; #&lt;TypeError: I don't believe this information.&gt;
+
+# The $@ contains the current backtrace, if an exception was raised.
+# The backtrace shows were Ruby was _at_ when the exception fired.
+irb&gt; begin
+irb&gt;   raise TypeError, "I don't believe this information." 
+irb&gt; rescue
+irb&gt;   p $@
+irb&gt; end
+  =&gt; ["(irb):25:in `irb_binding'", "/usr/lib/ruby/1.8/irb/workspace.rb:52:in `irb_binding'", 
+      "/usr/lib/ruby/1.8/irb/workspace.rb:52"]
+</code></pre>
+
+<p>“I don’t remember you.” Blix looked at the gorilla with great interest. “Are you
+one of R.K.’s kids or something?”</p>
+
+<p>“Oh, come on!” said Fox Small, holding up a bill with an exclamation mark on it
+up to the gorilla’s nose. “Don’t tell me this means <em>nothing</em> to you! This one
+is probably <em>really important</em> since it has an exclamation on it. Maybe it pays
+for emergency stuff! Hospital bills or something!”</p>
+
+<p><strong>“Yeah, surgery!”</strong> said Fox Tall.</p>
+
+<p>The gorilla looked at the foxes with disgust from under the brim of his cap.
+“No, you’re wrong. You can’t pay for surgeries with that.”</p>
+
+<p>“But you see our point,” said the small fox. He grabbed some of the other bills.
+“And you say this bill <em>cannot</em> pay for surgeries? Well that sounds like it has
+a specific <em>non-surgery-related</em> purpose. Now, the question mark one. Oh, what
+would that one be for?”</p>
+
+<p>“Hey, give me those,” the gorilla snatched at the bills over the counter, but
+his long thumb kept getting in the way and every time he thought he had grabbed
+bills, it turned out he had only grabbed his long thumb.</p>
+
+<p>“Hey, hey, look, he’s mad,” said Fox Tall, happily clapping. “I wonder why. Did
+you notice how mad he started getting once we mentioned all these interesting
+meanings? <strong>We’re on to you! We figured out your game so fast!”</strong></p>
+
+<p>“We totally did!” said Fox Small, one of his elbows caught in the grip of the
+gorilla, the other arm waving a bill that featured an underscore. “This one’s
+for buying floor supplies, maybe even big rolls of tile and linoleum.”</p>
+
+<p>“See,” said Fox Tall, working to pry the gorilla’s fingers free, “we just have
+to figure out which is more expensive: surgery or linoleum! This is <em>so easy!”</em></p>
+
+<p><strong>“NO IT’S <span class="caps">NOT</span>!”</strong> yelled the gorilla, yanking at the
+smaller fox and battering the fox with his palms. <strong>“YOU <span class="caps">DON</span>’T <span class="caps">KNOW ANYTHING ABOUT MONKEY
+MONEY</span>!! <span class="caps">YOU DON</span>’T <span class="caps">EVEN</span> <em><span class="caps">HAVE</span></em> YOUR <span class="caps">OWN KINDS OF MONEY</span>!!”</strong></p>
+
+<p>“We could <em>easily</em> have our own kinds of money!” said Fox Tall, taking the
+chimp’s hat and tossing it to the back of the room, where it sailed behind a
+wall of safety deposit boxes. “And—<em>your hat is outta here!</em>“</p>
+
+<p>“Come on, give him back his bills,” said Blix, waving his arms helplessly from
+the sidelines. “We could really use this guy’s help.”</p>
+
+<p>“Stop hitting me!” screamed the littlest fox. “I’ve almost figured out this one
+with the dots on it!!”</p>
+
+<p>Suddenly, with great precision and without warning, Fox Tall grabbed the
+monkey’s nose and slammed his face down against the counter. The pens and
+inkpads on its surface rattled and “Bam!” said the fox. The gorilla’s eyes spun
+sleepily as his arms… then his neck… then his head slithered to the floor behind
+the counter.</p>
+
+<p>Here are a few more global variables you might care to use:</p>
+
+<pre><code>irb&gt; $/      # The $/ is the line separator, it is normally set to \n, which represents _Enter_
+  =&gt; "\n"    # or "end of line".  The slash represents a sword slashing lines in a file.
+
+# The line separator controls how methods like each_line or readlines breaks up strings.
+irb&gt; "Jeff,Jerry,Jill\nMichael,Mary,Myrtle".each_line { |names| p names }
+  =&gt; "Jeff,Jerry,Jill\n" 
+  =&gt; "Michael,Mary,Myrtle" 
+
+# If you change the line separator, you change how many methods work, such as each_line.
+# See what happens when I change the line separator to a comma.
+irb&gt; $/ = ','
+irb&gt; "Jeff,Jerry,Jill\nMichael,Mary,Myrtle".each_line { |names| p names }
+  =&gt; "Jeff," 
+  =&gt; "Jerry," 
+  =&gt; "Jill\nMichael," 
+  =&gt; "Mary," 
+  =&gt; "Myrtle" 
+
+irb&gt; $,     # The $, variable is the join separator, used when joining strings with
+  =&gt; nil    # Array#join or Kernel::print.  The comma is a common join character.
+
+# The join separator is normally empty.
+irb&gt; ['candle', 'soup', 'mackarel'].join
+  =&gt; "candlesoupmackarel" 
+irb&gt; $, = ' * '; ['candle', 'soup', 'mackarel'].join
+  =&gt; "candle * soup * mackarel" 
+
+# But, usually, you won't need the global variable.
+irb&gt; ['candle', 'soup', 'mackarel'].join ' # '
+  =&gt; "candle # soup # mackarel" 
+
+irb&gt; $;     # The $; variable is the split separator, used when splitting strings
+  =&gt; nil    # with String#split.
+
+# The split separator is normally empty, which means String#split will separate
+# the string where there is whitespace.
+irb&gt; "candle  soup\nmackarel".split
+  =&gt; ["candle", "soup", "mackarel"]
+irb&gt; $; = 'a'; "candle  soup\nmackarel".split
+  =&gt; ["c", "ndle  soup\nm", "ck", "rel"]
+
+# But, usually, you won't need the global variable.
+irb&gt; "candle # soup # mackarel".split ' # '
+  =&gt; ['candle', 'soup', 'mackarel']
+</code></pre>
+
+<p>Outside the <em>Gorilla Mint</em>, Blix scolded the foxes. “We could have used that
+guy’s help! If he knows where R.K. is, we could use his cunning!”</p>
+
+<p>“<strong>We don’t need that ape’s money!</strong>” said Fox Small. “<strong>We can make our <em>own</em>
+money!</strong>“</p>
+
+<p>“<strong>We could support electronic wristbands!</strong>” said Fox Tall.</p>
+
+<p>“His money is worthless,” said Blix. “It’s gorilla money. It has no value. It’s
+worse than blue crystals.”</p>
+
+<p>“But it serves a purpose,” said Fox Tall.</p>
+
+<p>“No it doesn’t,” said Fox Small. “He just said it’s worthless.”</p>
+
+<p>“But what about linoleum and surgeries?” said Fox Tall.</p>
+
+<p>“Yeah,” said Fox Small, up at Blix. “What about linoleum and surgeries?”</p>
+
+<p>“If all the hospitals were staffed by gorillas and all the home improvement
+chains were strictly operated by gorillas,
+then—<span class="caps">YES</span>—you could buy linoleum and surgeries. But I
+<em>guarantee</em> that you would have very sloppy linoleum and very hideous surgeries.
+I don’t think you’d make it out of that economy alive.”</p>
+
+<p>“So, if R.K. is so cunning,” said Fox Tall, grinning slyly, “why does he print
+such worthless currency?”</p>
+
+<p>“It’s a cover for other activities,” said Blix. “Besides, if you’re so smart,
+why did you resort to violently pounding that poor gorilla?”</p>
+
+<p>“I guess that was a bad play,” said Fox Tall, hanging his head. “My friend here
+will tell you that I’ve been on edge all day.”</p>
+
+<p>“And your rage finally reared its fuming snout!” said Fox Small. “You’re finally
+living up to your goatee.”</p>
+
+<p><img src="../images/wixl-10.gif" alt="" /></p>
+
+<p>Down the lanes they travelled, the two foxes oblivious to their direction, but
+having a good time now that they had Blix leading the way with such urgency.
+They lapsed into a careless wandering right behind Blix and spent their
+afternoon heckling most of the passersby.</p>
+
+<p>One such target of their ongoing commentary was The Winged Scroll Carriers,
+pairs of bats that carry documents which need to be immediately sworn and
+notarized. There can be no delay, they must go swift, there is not even time to
+roll up the scroll, no, they must drop their swiss cheese and be out the door.</p>
+
+<p>These couriers resemble a kind of Ruby construct called <strong>delimited types</strong>. A
+long series of characters comprises the scroll, flanked on each side by a bat
+bracing its curly wings to hold the scroll together. The opening bat wears a hat
+on which is written <code>%w</code>, which identifies the scroll as a set of words.</p>
+
+<pre><code>irb&gt; bats = %w{The Winged Scroll Carriers}
+  =&gt; ['The', 'Winged', 'Scroll', 'Carriers']
+</code></pre>
+
+<p>The <code>%w</code> bats and their scroll, when fed into Ruby, emerge as an array of words.
+This syntax is a shortcut in case you don’t want to go through the trouble of
+decorating each word with commas and quotes. You are in a hurry, too, there can
+be no delay. You jot out the words between the bats and let Ruby figure out
+where to cut.</p>
+
+<p>Other bats, other hats. For instance, the <code>%x</code> hat runs an external program.</p>
+
+<pre><code>irb&gt; %w{ruby --help}
+  =&gt; ["ruby", "--help"]
+irb&gt; %x{ruby --help}
+  =&gt; "Usage: ruby [switches] [--] [programfile] [arguments] ..."
+</code></pre>
+
+<p>My favorite is the <code>%Q</code> hat, which can also be written as just <code>%</code>. This acts
+just like a double-quoted string, but looks nice when used with strings that
+run-on for many lines. Like, say you’re adding a new method with <code>eval</code>.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">m</span> <span class="o">=</span> <span class="s2">"bats!"</span>
+<span class="nb">eval</span> <span class="sx">%(
+  def #{ m }
+    puts "{" * 100
+  end
+)</span></code></pre></figure>
+
+<p>Just like a double-quoted string, you can use the string interpolation lilypads
+inside.</p>
+
+<p><img src="../images/wixl-15.png" alt="Cloneberries: The More You Eat, The More *You*." title="Cloneberries: The More You Eat, The More *You*." /></p>
+
+<p>Blixy wagged his head. “Oh, dear me.”</p>
+
+<p>“Egads! My hand is pregnant,” said Fox Tall, watching the little fox embryo
+slide about in his palm.</p>
+
+<p>“They are good berries, though,” said Blix. “The wine they make from these
+berries will make ya grow a few eyeballs in your teeth. But no more than that.”</p>
+
+<p>“Ah, pain!” yelled Fox Small, as his miniature squeezed out through the pores in
+his scalp. But soon he was cradling his little self and murmuring lullablies.
+<em>Nevermore, nevermore, sweetly sang the nightingale. Winking starlight, sleeping
+still, whilst perched on a Sycamore stump.</em></p>
+
+<p>Making duplicates of Ruby objects is no more than a berry’s worth of code.</p>
+
+<pre><code>irb&gt; tree = [:berry, :berry, :berry]
+  =&gt; [:berry, :berry, :berry]
+irb&gt; treechild = tree.clone
+  =&gt; [:berry, :berry, :berry]
+</code></pre>
+
+<p>The <code>clone</code> method makes an exact copy of a Ruby object. How does this differ
+from regular assignment?</p>
+
+<pre><code>irb&gt; tree_charles_william_iii = tree
+  =&gt; [:berry, :berry, :berry]
+</code></pre>
+
+<p>Assigning object to variables only creates more nicknames. The above Array can
+be called <code>tree_charles_william_iii</code> now. Or the shorter <code>tree</code>. The same
+object, but different names.</p>
+
+<p>However, a clone is a copy of an object. You can modify it without affecting the
+original.</p>
+
+<pre><code>irb&gt; treechild &lt;&lt; 'flower'
+  =&gt; [:berry, :berry, :berry, 'flower']
+irb&gt; tree
+  =&gt; [:berry, :berry, :berry]
+</code></pre>
+
+<p>The <code>clone</code> method doesn’t make copies of everything attached to the object,
+though. In the array above, only the array is copied, not all the symbols and
+strings inside.</p>
+
+<p>You may also see the <code>dup</code> method used to copy objects. The <code>dup</code> method makes
+copies which aren’t as exact. For example, there are objects in Ruby which are
+“frozen” and can’t be altered. If you <code>clone</code> the object, you get an exact copy
+which is also frozen. If you use <code>dup</code>, you get an unfrozen copy that you can
+change if you like.</p>
+
+<p>The <code>clone</code> method also copies the metaclass of an object, whereas <code>dup</code> does
+not.</p>
+
+<pre><code>irb&gt; o = Object.new
+irb&gt; class &lt;&lt; o
+irb&gt;   def nevermore; :nevermore; end
+irb&gt; end
+
+irb&gt; o.clone.nevermore
+  =&gt; :nevermore
+irb&gt; o.dup.nevermore
+# NoMethodError: undefined method `nevermore' for #&lt;Object:0xb7d4a484&gt;
+#         from (irb):7
+</code></pre>
+
+<p>You don’t always need to make copies of objects, though, since many methods like
+<code>collect</code> and <code>gsub</code> and <code>format</code> make copies for you as part of their work.</p>
+
+<p><img src="../images/wixl-4.gif" alt="Deer of the Smoky Pink Puffing." title="Deer of the Smoky Pink Puffing." /></p>
+
+<p>Over the hills and down the valleys, they ran through the grass where the Deer
+of the Smoky Pink Puffing roam. The sun was obscured by the lumbering pink
+clouds, emblazened with deer language, tinting the horizon a gradient of
+grapefruit and secreting a glow over the meadow. The clouds slid past each
+other, some bobbing upwards, destined for Canadian relatives. Others landing a
+readable distance from a recipient’s hooves.</p>
+
+<p>“Let’s stop! <em>Please!</em>” yelled Fox Tall. “You can’t expect us to run in this
+<strong>unbreathable fluff!</strong>“</p>
+
+<p>“Why are you yelling?” said Blix, as a thin stratus telegram wafted behind his
+legs. “You don’t need to raise your voice above a whisper. These long skinny
+clouds are usually just a mumble or a sigh. They may not even make it all the
+way.”</p>
+
+<aside class="sidebar">
+  <h2>Steaks ‘n’ Slides</h2>
+
+  <p>My uncles love waterslides and they also love steakhouses. They have these
+waterslide days which are directly followed by a trip over to Joey’s Steakhouse.
+I <em>hate</em> Joey’s Steakhouse. It’s all big, brown shoe meat. Floppy and galoshy.
+Mixed with the stench of the uncles’ chlorine.</p>
+
+  <p>Pruny fingers on meat slabs is The Revolting.</p>
+
+  <p>It’s time for steaks and waterslides to come together in a truly repugnant
+manner. My uncles have had steaks and waterslides their whole lives. The dynasty
+of steaks and waterslides must come to a close. I will marry them in ways
+against nature!</p>
+
+  <p>Like this:</p>
+
+  <ul>
+    <li>Hand steaks to riders as they board the waterslide. Rider looks at the
+lifeguard. Lifeguard says wait. Rider looks again. The lifeguard pauses. Then.
+Okay, it’s time. <em>Go, kid, go!</em> And the look on that kid’s face as he rushes
+down the slope, paws full of chuck! <em>Go, kid, go!</em></li>
+    <li>Kids slide on top of steaks. For safety, we’d want the slides stacked five
+steaks deep.</li>
+    <li>Or, steaks do the sliding. In their own little swim trunks.</li>
+    <li>Or, people. With steak swim trunks.</li>
+    <li>People and steaks, side-by-side.</li>
+    <li>Steaks travelling down waterslides composed of steaks.</li>
+    <li>Steaks travelling down waterslides made of people.</li>
+    <li>And, of course, people eating steaks, but their tongues come out as
+waterslides and they have to push the steaks up the waterslides. Which is
+impossible and a lifeguard has to climb up the waterslide and manually insert
+the steak into the esophagus.</li>
+    <li>Waterslides eating people and steaks eating people.</li>
+    <li>Waterslides and steaks becoming friends after smelling people on each other’s
+breath.</li>
+    <li>Or, steaks befriending waterslides, but waterslides not reciprocating.
+Waterslides become increasingly despondent and detached, getting into bad
+crowds and sinking into political extremity. Steaks make ankle bracelets out of
+people and leave them in the waterslides’ trouser pockets, when the trousers are
+unattended. They sneak out of the waterslide commune via a huge waterslide made
+of steak swim trunks.</li>
+    <li>Or, like I said, people with steak swim trunks.</li>
+  </ul>
+</aside>
+
+<p>“All that writing on the cloud is deer talk?” said Fox Small.</p>
+
+<p>“Help! <em>Where are you guys?</em>” The taller fox ducked through a stormy tirade
+comprised of thick, billowing smoke and sharp wisps. He whirled in every
+direction, “Somebody yell if you’re there!”</p>
+
+<p>He searched for a fissure in the dense matter, combing forward with his hands.
+The verbose, angry clouds responded by prodding him ahead, forcing him into
+tight corners in their brief pause between sentences. He landed in a sinkhole
+and kept his head down as the cascades of smoke surged forward.</p>
+
+<p>“Yeah, deer can read this stuff,” said Blix. “They just face their target and
+shoot it out of their nostrils. I once heard of a guy who <strong>rode</strong> a stag’s love
+poem.”</p>
+
+<p>“No way,” said Fox Small.</p>
+
+<p>“Yep,” said Blix. “And that guy was me.” Blix reached over his shoulder and
+latched onto a spiral column of smoke that was twisting just above his head.
+“You just have to know which clouds are wimpy and which clouds are
+grandiloquent.” Blix let the cloud pull him along and when the cloud banked
+upwards, Blix loosed his grip and kept his feet moving slowly along the ground.
+“See, here’s a good one, long like a broom handle. A guy found one once and it
+was shaped <em>exactly</em> like a car: windshield, driver’s side airbag, power
+steering. Uncanny!”</p>
+
+<p>“<em>And that guy was—</em>“</p>
+
+<p><strong>“It was!”</strong> And Blix climbed up atop the long icy cloud, with its dangling
+glyphs, and stood proudly, floating high above the small fox’s pointy shadow.</p>
+
+<p>“Oh, I could do that,” said Fox Small. “Tall and I go jetskiing all the time.
+<em>I’ve stood up on my jetski.</em> It’s just like that.”</p>
+
+<p>Fox Tall dashed through a descending puff, shattering its sentence, which
+letters came unglued and littered the ground with scrambled words, but he had
+only succeeded in reaching the depressive portions of the deer correspondence,
+which manifested itself as a dank and opaque mist.</p>
+
+<p>Meanwhile, his smaller counterpart grabbed a narrow train of smoke that passed
+under his arm. He was airborned and yelled, <strong>“Tallyho!”</strong> But he held too
+tightly and the cloud evaporated under his arm and sent him back down with a
+short hop.</p>
+
+<p>Since you’re just beginning your use of Ruby, you may not fully grasp regular
+expressions (or <em>regexps</em>) at first. You may even find yourself clipping out
+regexps from the <a href="http://regexlib.com/DisplayPatterns.aspx">Regular Expression Library</a> and pasting them into your code
+without having the foggiest idea why the expression works. Or <em>if</em> it works!</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="kp">loop</span> <span class="k">do</span>
+  <span class="nb">print</span> <span class="s2">"Enter your password: "</span>
+  <span class="n">password</span> <span class="o">=</span> <span class="nb">gets</span>
+  <span class="k">if</span> <span class="n">password</span><span class="p">.</span><span class="nf">match</span><span class="p">(</span> <span class="sr">/^\w{8,15}$/</span> <span class="p">)</span>
+    <span class="k">break</span>
+  <span class="k">else</span>
+    <span class="nb">puts</span> <span class="s2">"** Bad password! Must be 8 to 15 characters!"</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></figure>
+
+<p>Do you see the unreadable deer language in the example code? The <code>/^\w{8,15}$/</code>
+is a regular expression. If I may translate, the regexp is saying, <em>Please only
+allow letters, numbers or underscores. No less than eight and no more than
+fifteen.</em></p>
+
+<p>Regular expressions are a mini-language built into Ruby and many other
+programming languages. I really shouldn’t say <em>mini</em>, though, since regexps can
+be twisted and complicated and much more difficult than any Ruby program.</p>
+
+<p>Using regular expressions is extremely simple. It is like the Deer: making the
+smoke is an arduous process. But hooking your elbow around the smoke and driving
+it to the Weinerschnitzel to get mustard pretzel dogs is easy.</p>
+
+<pre><code>irb&gt; "good_password".match( /^\w{8,15}$/ )
+  =&gt; #&lt;MatchData:0xb7d54218&gt;
+irb&gt; "this_bad_password_too_long".match( /^\w{8,15}$/ )
+  =&gt; nil
+</code></pre>
+
+<p>The <code>String#match</code> method is the <em>simplest practical use</em> of regexps. The
+<code>match</code> method checks to see if the string meets the rules inside the regexp. A
+regexp is only useful with strings, to test strings for a series of conditions.
+If the conditions are met, a <code>MatchData</code> object is returned. If not, you get
+<code>nil</code>.</p>
+
+<p>The most basic regular expressions are for <strong>performing searches</strong> inside
+strings. Let’s say you’ve got a big file and you want to search it for a word or
+phrase. Since a bit of time has passed, let’s search the Preeventualist’s Losing
+and Finding Registry again.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s1">'preeventualist'</span>
+<span class="no">PreEventualist</span><span class="p">.</span><span class="nf">searchfound</span><span class="p">(</span> <span class="s1">'truck'</span> <span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">page</span><span class="o">|</span>
+  <span class="n">page</span><span class="p">.</span><span class="nf">each_line</span> <span class="k">do</span> <span class="o">|</span><span class="n">line</span><span class="o">|</span>
+    <span class="nb">puts</span> <span class="n">line</span> <span class="k">if</span> <span class="n">line</span><span class="p">.</span><span class="nf">match</span><span class="p">(</span> <span class="sr">/truck/</span> <span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></figure>
+
+<p>This isn’t too different from the code we used earlier to search for lines with
+the word “truck”. Earlier we used <code>puts line if line['truck']</code>, which is
+actually a simpler way of searching a string, if you’re just looking for a
+simple word. The regexp <code>/truck/</code> is identical. Find the word “truck”. Anywhere
+in the string.</p>
+
+<p>Uhm, what if truck is capitalized. <strong>Truck.</strong> What then?</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">puts</span> <span class="n">line</span> <span class="k">if</span> <span class="n">line</span><span class="p">.</span><span class="nf">match</span><span class="p">(</span> <span class="sr">/[Tt][Rr][Uu][Cc][Kk]/i</span> <span class="p">)</span></code></pre></figure>
+
+<p>The <strong>character classes</strong> are the sections surrounded by <strong>square brackets</strong>.
+Each character class gives a list of characters which are valid matches for that
+spot. (The first spot matches either an uppercase <code>T</code> or a lowercase <code>t</code>. The
+second spot matches an <code>R</code> or an <code>r</code>. And so on.)</p>
+
+<p>But a simpler way to write it is like this:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">puts</span> <span class="n">line</span> <span class="k">if</span> <span class="n">line</span><span class="p">.</span><span class="nf">match</span><span class="p">(</span> <span class="sr">/truck/i</span> <span class="p">)</span></code></pre></figure>
+
+<p>The letter <code>i</code> modifier at the end of the regexp indicates that the search is
+<strong>not case-sensitive</strong>. It will match Truck. And <span class="caps">TRUCK</span>. And TrUcK. And other ups and downs.</p>
+
+<p>Oh, and maybe you’re truck is a certain model number. <span class="caps">A
+T</span>-1000. Or a T-2000. You can’t remember. It’s a T <em>something</em> thousand.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">puts</span> <span class="n">line</span> <span class="k">if</span> <span class="n">line</span><span class="p">.</span><span class="nf">match</span><span class="p">(</span> <span class="sr">/T-\d000/</span> <span class="p">)</span></code></pre></figure>
+
+<p>See, deer language. The <code>\d</code> represents a <strong>digit</strong>. It’s a place holder in the
+regexp for any type of number. The regexp will now match T-1000, T-2000, all the
+way up to T-9000.</p>
+
+<table>
+		<tr>
+			<td colspan="3"><strong>Character Classes</strong> </td>
+		</tr>
+		<tr>
+			<td> <code>\<span class="ident">d</span></code> </td>
+			<td> matches digits </td>
+			<td> can also be written <code><span class="punct">[</span><span class="number">0</span><span class="punct">-</span><span class="number">9</span><span class="punct">]</span></code> </td>
+		</tr>
+		<tr>
+			<td> <code>\<span class="ident">w</span></code> </td>
+			<td> matches word characters (letters, numbers and the underscore) </td>
+			<td> can also be written <code><span class="punct">[</span><span class="constant">A</span><span class="punct">-</span><span class="constant">Za</span><span class="punct">-</span><span class="ident">z0</span><span class="punct">-</span><span class="number">9_</span><span class="punct">]</span></code> </td>
+		</tr>
+		<tr>
+			<td> <code>\<span class="ident">s</span></code> </td>
+			<td> matches whitespace (spaces, tabs, carriage returns, line feeds) </td>
+			<td> a.k.a. <code><span class="punct">[</span> \<span class="ident">t\r\n</span><span class="punct">]</span></code> </td>
+		</tr>
+		<tr>
+			<td> <code>\<span class="constant">D</span></code> </td>
+			<td> matches everything <em>but</em> digits </td>
+			<td> a negated set <code><span class="punct">[^\</span><span class="ident">d</span><span class="punct">]</span></code> </td>
+		</tr>
+		<tr>
+			<td> <code>\<span class="constant">W</span></code> </td>
+			<td> matches everything <em>but</em> word chars </td>
+			<td> just like <code><span class="punct">[^\</span><span class="ident">w</span><span class="punct">]</span></code> </td>
+		</tr>
+		<tr>
+			<td> <code>\<span class="constant">S</span></code> </td>
+			<td> matches everything <em>but</em> whitespace </td>
+			<td> also <code><span class="punct">[^\</span><span class="ident">s</span><span class="punct">]</span></code> </td>
+		</tr>
+		<tr>
+			<td> <code><span class="punct">.</span></code> </td>
+			<td> the period matches <strong>everything</strong>. </td>
+		</tr>
+	</table>
+
+<p>Building a regexp involves chaining these placeholders together to express your
+search. If you’re looking for a number, followed by whitespace: <code>/\d\s/</code>. If
+you’re looking for three numbers in a row: <code>/\d\d\d/</code>. <strong>The opening and closing
+slashes mark the beginning and end of the regexp.</strong></p>
+
+<p>A search for three numbers in a row can also be written as: <code>/\d{3}/</code>.
+Immediately following a character class like <code>\d</code>, you can use a quantifier
+symbol to mark how many times you want the character class to be repeat.</p>
+
+<table>
+		<tr>
+			<td colspan="3"><strong>Quantifiers</strong> </td>
+		</tr>
+		<tr>
+			<td> <code><span class="punct">{</span><span class="ident">n</span><span class="punct">}</span></code> </td>
+			<td> match exactly <em>n</em> times </td>
+			<td> Precisely three numbers in a row is <code><span class="punct">/</span><span class="regex"><span class="escape">\d</span>{3}</span><span class="punct">/</span></code> </td>
+		</tr>
+		<tr>
+			<td> <code><span class="punct">{</span><span class="ident">n</span><span class="punct">,}</span></code> </td>
+			<td> matches <em>n_ times or _more</em> </td>
+			<td> Three or more letters in a row is <code><span class="punct">/</span><span class="regex">[a-z]{3,}</span><span class="punct">/</span><span class="ident">i</span></code> </td>
+		</tr>
+		<tr>
+			<td> <code><span class="punct">{</span><span class="ident">n</span><span class="punct">,</span><span class="ident">n2</span><span class="punct">}</span></code> </td>
+			<td> matches at least <em>n_ times but no more than _n2</em> times </td>
+			<td> So, <code><span class="punct">/</span><span class="regex">[<span class="escape">\d</span>,]{3,9}</span><span class="punct">/</span></code> matches between three and nine characters which are numbers or commas </td>
+		</tr>
+		<tr>
+			<td> <code><span class="punct">*</span></code> </td>
+			<td> the asterisk <code><span class="punct">*</span></code> is short for <code><span class="punct">{</span><span class="number">0</span><span class="punct">,}</span></code> </td>
+			<td> To match a colon, followed by zero or more word characters: <code><span class="punct">/</span><span class="regex">:<span class="escape">\w</span>*</span><span class="punct">/</span></code> </td>
+		</tr>
+		<tr>
+			<td> <code><span class="punct">+</span></code> </td>
+			<td> the plus is short for <code><span class="punct">{</span><span class="number">1</span><span class="punct">,}</span></code> </td>
+			<td> To match one or more minus or plus signs, use <code><span class="punct">/</span><span class="regex">[-+]+</span><span class="punct">/</span></code> </td>
+		</tr>
+		<tr>
+			<td> <code><span class="punct">?</span></code> </td>
+			<td> the question mark is short for <code><span class="punct">{</span><span class="number">0</span><span class="punct">,</span><span class="number">1</span><span class="punct">}</span></code> </td>
+			<td> To match three numbers followed by an optional period: <code><span class="punct">/</span><span class="regex"><span class="escape">\d</span>{3}[.]?</span><span class="punct">/</span></code> </td>
+		</tr>
+	</table>
+
+<p>A really common regular expression is for matching phone numbers. American phone
+numbers (including an area code) can be matched using the digit character class
+and the precise quantifiers.</p>
+
+<pre><code>irb&gt; "Call 909-375-4434" =~ /\d{3}-\d{3}-\d{4}/
+  =&gt; 5
+irb&gt; "The number is (909) 375-4434" =~ /[(]\d{3}[)]\s*\d{3}-\d{4}/
+  =&gt; 14
+</code></pre>
+
+<p>This time, instead of using <code>match</code> to search for the expression, the <code>=~</code>
+operator was used. This operator is the <strong>match operator</strong>, an equals sign
+followed by <strong>a tilde</strong>. The tilde is like a bit of smoke coming off the edge of
+a smokestack. Remember the deer, the smoke they blow, a cryptic language just
+like regular expressions. The smoky tilde points toward the regexp.</p>
+
+<p>The match operator returns a number. The number is the spot in the string where
+the regular expression matched. So when the match operator returns <code>5</code>, it’s
+saying, “Before the match, there are five characters in the string.”</p>
+
+<p>If you need to get the full string matched, you can use the special <code>$&amp;</code> global
+variable if you’re using the match operator. Or, if you’re using the <code>match</code>
+method, you can get the full string by converting the <code>MatchData</code> object to a
+string.</p>
+
+<pre><code># Using =~ and $&amp; together.
+irb&gt; "The number is (909) 375-4434" =~ /[(]\d{3}[)]\s*\d{3}-\d{4}/
+  =&gt; 14
+irb&gt; $&amp;
+  =&gt; "(909) 375-4434" 
+
+# Using the MatchData object.
+irb&gt; phone = /[(]\d{3}[)]\s*\d{3}-\d{4}/.match("The number is (909) 375-4434")     
+  =&gt; #&lt;MatchData:0xb7d51680&gt;
+irb&gt; phone.to_s
+  =&gt; "(909) 375-4434"
+</code></pre>
+
+<p>Most Rubyists prefer the second approach, as it uses an object within a <em>local
+variable</em> rather than a <em>global variable</em>. Global variables are kind of sketchy,
+since they can be easily overwritten. If you run two regular expressions in a
+row, the global variable gets overwritten the second time. But with local
+variables, you can keep both matches around as long as the variables are named
+differently.</p>
+
+<p>Other than matching, another common use of regular expression is to do
+<strong>search-and-replace</strong> from within Ruby. You can search for the word “cat” and
+replace it with the word “banjo.” Sure, you can do that with strings or regexps.</p>
+
+<pre><code>irb&gt; song = "I swiped your cat / And I stole your cathodes" 
+irb&gt; song.gsub 'cat', 'banjo'
+  =&gt; "I swiped your banjo / And I stole your banjohodes" 
+
+irb&gt; song.gsub /\bcat\b/, 'banjo'
+  =&gt; "I swiped your banjo / And I stole your cathodes"
+</code></pre>
+
+<p>The <code>gsub</code> method is named for “global substitution.” Notice how in the first
+example it replaced the word “cat” and the first three letters of “cathodes.”
+Strings also have a simple <code>sub</code> method which will substitute only once.</p>
+
+<p>And so this chapter ends, with Blix and the Foxes cruising aloft the solid pink
+belched from a very outspoken deer somewhere in those pastures.</p>
+
+<p><a name="section6"></a></p>
+
+<h2>6. Just Stopping To Assure You That the Porcupine Hasn’t Budged</h2>
+
+<p><img src="../images/porcupine-3.gif" alt="The porcupine and his kite again." title="The porcupine and his kite again." /></p>
+
+<p><a name="section7"></a></p>
+
+<h2>7. I’m Out</h2>
+
+<p style="float:right"><img src="../images/quil-1.png" alt="" /></p>
+
+<p style="float:left"><img src="../images/quil-2.png" alt="" /></p>
+
+<p>One day, back around the time I met Bigelow (that dog who walked off with the
+balloons), I came back to my apartment hauling some board games I’d bought at a
+garage sale. And Quil was on my porch. Which stunned me since she’d been in San
+Antonio for like three years. She was sleeping in a sleeping bag on my porch.</p>
+
+<p>She had run out of money to go to art school, so she stayed at my place for five
+months or so.</p>
+
+<p>I found this used bunkbed for our place. At night we’d sit in our beds and read
+each other stories from our notebooks. I was writing a book about a kid who’s a
+detective and he’s trying to figure out who killed this kid on his tennis team
+and all these animals end up helping him figure it out. She was writing a book
+about this kid who puts an ad in the classifieds to get other kids to join his
+made-up cult and they end up building a rocket ship. But during most of her book
+these kids are lost in the woods and pretty directionless, which I got a kick
+out of hearing each night.</p>
+
+<p>Yeah, each night it was poetry or stories or ideas for tricking our neighbors.
+Our neighbor Justin was a big fan of Warhammer and he had all these real swords
+and tunics. We decided to make suits of armor out of tin foil and go attack his
+apartment. We started ransacking his apartment and he loved it. So he made his
+own suit of armor out of tin foil and we all went to a professional glamour
+studio and had a quality group shot taken.</p>
+
+<p style="float:right"><img src="../images/quil-3.png" alt="" /></p>
+
+<p>I’m not saying my life is any better than yours. I just miss my sister. Life
+isn’t like that now. We’re dissolved or something.</p>
+
+<p>I don’t know. I’m confused. Is this growing up? Watching all your feathers come
+off? And even though some of those feathers were the most lovely things?</p>
+
+<p>I’m having a hard time telling who stopped it all up. Who stopped loving who?
+Did I stop caring? Maybe I only saw her in two-dimensions and I didn’t care to
+look at the other angles. I only saw planes. Then she shimmied up the z-axis
+when I wasn’t looking and I never did the homework to trace the coordinates. A
+limb on a geometrical tree and I am insisting on circles.</p>
+
+<p>Blix was right. I’m in so shape to write this book. Goodbye until I can shake
+this.</p>
+
+<p><img src="../images/departure.png" alt="" /></p>
+
+
+
+      <p style="text-align:right;">
+      <a href="chapter-7.html">Turn page.</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+
+<script>
+var _gauges = _gauges || [];
+if (/poignant\.guide/.test(location.hostname)) (function() {
+  var t   = document.createElement('script');
+  t.type  = 'text/javascript';
+  t.async = true;
+  t.id    = 'gauges-tracker';
+  t.setAttribute('data-site-id', '50b4e2ebf5a1f53e2300008b');
+  t.src = '//secure.gaug.es/track.js';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(t, s);
+})();
+</script>
+
+</body>
+</html>

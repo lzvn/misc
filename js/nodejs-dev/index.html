@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <script>
+        function sendServer()
+        {
+            let nome = $('#nameid').val();
+            let idade = $('#idadeid').val();
+            let nasc = $('#nascid').val();
+
+            $.ajax
+            ({
+              	type: "POST",
+              	method: "POST",
+              	url: "/http-hello.js",
+              	data: "nome="+nome+"&idade="+idade+"&nasc="+nasc,
+              	contentType: "application/json; charset=utf-8",
+              	dataType: "json",
+              	async: true,
+              	cache: false,
+              	success: function(result){
+              	    console.log("Success");
+              	}
+            });
+        }
+    </script>
+</head>
+<body>
+    <h1>Hello World!</h1>
+    <br> <br> <br>
+
+   <p>This is a big fucking hello to you, world!</p>
+
+   <form action="http-hello.js" method="post">
+       <label>Nome</label>
+       <input id="nameid" type="text" name="name">
+       <label>Idade</label>
+       <input id="idadeid" type="text" name="age">
+       <label>Data de nascimento</label>
+       <input id="nascid" type="text" name="birthage">
+       <label>Form submit</label>
+       <input type="submit" value="Submit">
+   </form>
+   <button onclick="sendServer()">Submit</button>
+</body>
+</html>

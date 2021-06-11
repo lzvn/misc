@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <title>Spring Example</title>
+	<script>
+		window.addEventListener('load', () => {
+			document.querySelector("#send").addEventListener('click', () => {
+				let xhttp = new XMLHttpRequest();
+				let url = "example/greeting?name=" + document.querySelector("#name").value;
+				xhttp.open("GET", url, false);
+				xhttp.send();
+				let greeting = JSON.parse(xhttp.responseText);
+				delete xhttp;
+
+				let title = document.createElement("h1");
+				title.innerHTML = greeting.content;
+				title.style.textAlign = "center";
+				document.querySelector("body").appendChild(title);
+				document.querySelector('#input').style.visibility = "hidden";
+			});
+			document.querySelector("#name").addEventListener("keydown", (event) => {
+				if(event.key=="Enter") document.querySelector("#send").click();
+			});			
+		});
+	</script>	
+  </head>
+  <body>
+	  <div id="input">
+		  <input type="text" id="name" placeholder="Type your name"> <button id="send">And click here!</button>
+	  </div>
+  </body>
+</html>

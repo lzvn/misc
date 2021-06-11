@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="HelloWeb" basedir="." default="deploy">
+    <property name="src" location="src" />
+    <property name="web-src" location="src-web" />
+    <property name="bin" location="bin" />
+    <property name="lib" location="lib" />
+    <property name="deploy" location="deploy" />
+    <property name="dist" location="dist" />
+    <property name="war" value="hello.war" />
+    <property name="catalina.home" location="/home/r2d2/Downloads/tomcat/apache-tomcat-10.0.6"/>
+
+    <path id="compile.classpath">
+        <fileset dir="${lib}">
+            <include name="*.jar"/>
+        </fileset>
+        <fileset dir="${catalina.home}/lib">
+            <include name="*.jar"/>
+        </fileset>
+    </path>
+
+    <target name="deploy" depends="bundle,war">
+        <copy file="${dist}/${war}" todir="${catalina.home}/webapps" />
+    </target>
+
+    <target name="bundle" depends="prepare,compile">
+        <copy todir="${deploy}/WEB-INF">
+            <fileset dir="${web-src}"/>
+        </copy>
+        <copy todir="${deploy}/WEB-INF/classes">
+            <fileset dir="${bin}"/>
+        </copy>
+        <copy todir="${deploy}/WEB-INF/lib">
+            <fileset dir="${lib}"/>
+        </copy>
+    </target>
+
+    <target name="war" depends="bundle">
+        <jar jarfile="${dist}/${war}" basedir="${deploy}"/>
+    </target>
+
+    <target name="compile">
+        <mkdir dir="${bin}"/>
+        <javac srcdir="${src}" destdir="${bin}">
+            <classpath refid="compile.classpath"/>
+        </javac>
+    </target>
+
+    <target name="prepare">
+        <mkdir dir="${deploy}"/>
+        <mkdir dir="${deploy}/WEB-INF"/>
+        <mkdir dir="${deploy}/WEB-INF/classes"/>
+        <mkdir dir="${deploy}/WEB-INF/lib"/>
+        <mkdir dir="${dist}"/>
+    </target>
+
+    <target name="clean">
+        <delete includeemptydirs="true" verbose="true">
+            <fileset dir="${bin}" includes="**/**"/>
+            <fileset dir="${deploy}" includes="**/**"/>
+            <fileset dir="${dist}" includes="**/**"/>
+        </delete>
+    </target>
+
+</project>
