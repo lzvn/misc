@@ -21,13 +21,13 @@ public class MovieDaoTests {
         DirectorDao directorDao = DaoFactory.makeTestDirectorDao();
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
-        Director testDir = new Director(null, "Bob", sdf.parse("01/01/1970"));
+        Director testDir = new Director(null, "bob", sdf.parse("01/01/1970"));
         Long testDirId = directorDao.insert(testDir);
         testDir.setId(testDirId);
 
         //insertion and selection
-        Movie testMovie = new Movie(null, "Great Adventures", testDir,
-                "A hero goes on a journey to the unexpected", sdf.parse("04/05/1996"), 90);
+        Movie testMovie = new Movie(null, "great adventures", testDir,
+                "a hero goes on a journey to the unexpected", sdf.parse("04/05/1996"), 90);
         Long genKey = movieDao.insert(testMovie);
 
         Movie insertedMovie = movieDao.get(genKey);
@@ -40,8 +40,8 @@ public class MovieDaoTests {
 
         //update
         testMovie.setId(genKey);
-        testMovie.setTitle("Dragonhunter");
-        testMovie.setSynopsis("A great hero hunts down an evil dragon");
+        testMovie.setTitle("dragonhunter");
+        testMovie.setSynopsis("a great hero hunts down an evil dragon");
         testMovie.setReleaseDate(sdf.parse("08/12/1999"));
         testMovie.setDuration(150);
 

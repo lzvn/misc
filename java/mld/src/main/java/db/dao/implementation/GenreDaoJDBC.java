@@ -31,6 +31,7 @@ public class GenreDaoJDBC implements GenreDao {
                 }
             }
         } catch(SQLException e) {
+            System.out.println("ERROR GENREDAO");
             e.printStackTrace();
         }
 

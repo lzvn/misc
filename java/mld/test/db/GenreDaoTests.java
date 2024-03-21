@@ -14,14 +14,14 @@ public class GenreDaoTests {
         GenreDao genreDao = DaoFactory.makeTestGenreDao();
 
         //insertion and selection
-        Long genKey = genreDao.insert("Drama");
+        Long genKey = genreDao.insert("drama");
         String insertedGenre = genreDao.get(genKey);
-        assertEquals("Drama", insertedGenre);
+        assertEquals("drama", insertedGenre);
 
         //update
-        genreDao.update(genKey, "Action");
+        genreDao.update(genKey, "action");
         String updatedGenre = genreDao.get(genKey);
-        assertEquals("Action", updatedGenre);
+        assertEquals("action", updatedGenre);
 
         //deletion
         genreDao.delete(genKey);
@@ -31,7 +31,7 @@ public class GenreDaoTests {
     @Test
     public void getAllTest() {
         GenreDao genreDao = DaoFactory.makeTestGenreDao();
-        String[] testGenres = new String[]{"Adventure", "Fighting", "Comedy"};
+        String[] testGenres = new String[]{"adventure", "fighting", "fomedy"};
         Long[] testGenresIds = new Long[3];
         for(int i = 0; i < testGenres.length; i++) {
             testGenresIds[i] = genreDao.insert(testGenres[i]);

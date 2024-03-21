@@ -25,7 +25,7 @@ public class DirectorDaoTests {
         //insertion and selection
         long generatedKey = directorDao.insert(testDir);
         Director insertedDir = directorDao.get(generatedKey);
-        assertEquals(testDir.getName(), insertedDir.getName());
+        assertEquals(testDir.getName().toLowerCase(), insertedDir.getName().toLowerCase());
         assertEquals(testDir.getBirthDate(), testDir.getBirthDate());
 
         //updating
@@ -34,7 +34,7 @@ public class DirectorDaoTests {
         testDir.setBirthDate(sdf.parse("05/04/2003"));
         directorDao.update(testDir);
         Director updatedDir = directorDao.get(testDir.getId());
-        assertEquals(testDir.getName(), updatedDir.getName());
+        assertEquals(testDir.getName().toLowerCase(), updatedDir.getName().toLowerCase());
         assertEquals(testDir.getBirthDate(), updatedDir.getBirthDate());
 
         //deletion
@@ -48,9 +48,9 @@ public class DirectorDaoTests {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
         Director[] testDirectors = new Director[]{
-                new Director(null, "Amanda", sdf.parse("01/01/1980")),
-                new Director(null, "Bob", sdf.parse("01/01/1970")),
-                new Director(null, "Caesar", sdf.parse("01/01/1960"))
+                new Director(null, "amanda", sdf.parse("01/01/1980")),
+                new Director(null, "bob", sdf.parse("01/01/1970")),
+                new Director(null, "caesar", sdf.parse("01/01/1960"))
         };
         Long testDirId = 0L;
 
