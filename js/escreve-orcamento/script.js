@@ -4,6 +4,7 @@
  *     Adicionar proteções para números, seja com o tipo number, seja com o text, qual ficar melhor
  *     Adicionar adesivo de vinil simples, impressão à jato de tinta em sulfite grande, impressões cartão e foto
  *         com e sem corte, apostilas
+ *     Extrair o prazo para uma função padrão a todas
  */
 
 
@@ -12,7 +13,7 @@ const MODELS = {
         input: {
             QNT: {
                 name: "Quantidade",
-                type: "text",
+                type: "number",
                 value: "1" 
             },
             NOUN_PLURAL: {
@@ -23,12 +24,12 @@ const MODELS = {
             },
             WIDTH: {
                 name: "Largura",
-                type: "text",
+                type: "number",
                 value: "40"
             },
             HEIGHT: {
                 name: "Altura",
-                type: "text",
+                type: "number",
                 value: "60"
             },
             VERB_PLURAL: {
@@ -39,7 +40,7 @@ const MODELS = {
             },
             PRICE: {
                 name: "Preço",
-                type: "text",
+                type: "number",
                 value: "100,00"
             },
             MIN_DATE: {
@@ -51,18 +52,23 @@ const MODELS = {
                 name: "Máximo de prazo",
                 type: "text",
                 value: "3"
+            },
+            DATE_COMPL: {
+                name: "Tipo de data",
+                type: "radio",
+                options: [{name: "Dias Úteis", text: " dias úteis"}, {name: "Data fixa", text: ""}]
             }
         },
         title: "Banner",
         text: `$QNT banner$NOUN_PLURAL com tamanho $HEIGHT cm por $WIDTH cm com impressão ecossolvente em lona e acabamento de madeira e cordão
          fica$VERB_PLURAL no valor de *R$ $PRICE* tudo<br>
-        Conseguimos entregar para um prazo de $MIN_DATE a $MAX_DATE dias úteis`
+        Conseguimos entregar dentro de $MIN_DATE a $MAX_DATE$DATE_COMPL`
     },
     lona: {
         input: {
             QNT: {
                 name: "Quantidade",
-                type: "text",
+                type: "number",
                 value: "1" 
             },
             NOUN_PLURAL: {
@@ -73,12 +79,12 @@ const MODELS = {
             },
             WIDTH: {
                 name: "Largura",
-                type: "text",
+                type: "number",
                 value: "40"
             },
             HEIGHT: {
                 name: "Altura",
-                type: "text",
+                type: "number",
                 value: "60"
             },
             VERB_PLURAL: {
@@ -89,7 +95,7 @@ const MODELS = {
             },
             PRICE: {
                 name: "Preço",
-                type: "text",
+                type: "number",
                 value: "100,00"
             },
             MIN_DATE: {
@@ -101,18 +107,23 @@ const MODELS = {
                 name: "Máximo de prazo",
                 type: "text",
                 value: "3"
+            },
+            DATE_COMPL: {
+                name: "Tipo de data",
+                type: "radio",
+                options: [{name: "Dias Úteis", text: " dias úteis"}, {name: "Data fixa", text: ""}]
             }
         },
         title: "Lona",
         text: `$QNT lona$NOUN_PLURAL com tamanho $HEIGHT cm por $WIDTH cm com impressão ecossolvente em lona e acabamento de bainha e ilhós
          fica$VERB_PLURAL no valor de *R$ $PRICE* tudo<br>
-        Conseguimos entregar para $MIN_DATE a $MAX_DATE dias úteis`
+         Conseguimos entregar dentro de $MIN_DATE a $MAX_DATE$DATE_COMPL`
     },
     adesivo_recorte: {
         input: {
             QNT: {
                 name: "Quantidade",
-                type: "text",
+                type: "number",
                 value: "1" 
             },
             NOUN_PLURAL: {
@@ -123,12 +134,12 @@ const MODELS = {
             },
             WIDTH: {
                 name: "Largura",
-                type: "text",
+                type: "number",
                 value: "5"
             },
             HEIGHT: {
                 name: "Altura",
-                type: "text",
+                type: "number",
                 value: "5"
             },
             VERB_PLURAL: {
@@ -137,9 +148,19 @@ const MODELS = {
                 single: "",
                 plural: "m"
             },
+            IMPRESSAO: { //create the checkbox input and change this input and MATERIAL to it
+                name: "Tipo de impressão",
+                type: "radio",
+                options: [{name: "Laser", text: "à laser"}, {name: "Ecossolvente", text: "ecossolvente"}]
+            },
+            MATERIAL: {
+                name: "Tipo de material",
+                type: "radio",
+                options: [{name: "Papel adesivo fosco", text: "papel adesivo fosco"}, {name: "Vinil", text: "vinil adesivo"}]
+            },
             PRICE: {
                 name: "Preço",
-                type: "text",
+                type: "number",
                 value: "100,00"
             },
             MIN_DATE: {
@@ -152,27 +173,44 @@ const MODELS = {
                 type: "text",
                 value: "3"
             },
-            IMPRESSAO: { //create the checkbox input and change this input and MATERIAL to it
-                name: "Tipo de impressão",
-                type: "text",
-                value: "à laser"
-            },
-            MATERIAL: {
-                name: "Tipo de material",
-                type: "text",
-                value: "papel adesivo fosco"
+            DATE_COMPL: {
+                name: "Tipo de data",
+                type: "radio",
+                options: [{name: "Dias Úteis", text: " dias úteis"}, {name: "Data fixa", text: ""}]
             }
         },
         title: "Adesivo de recorte",
         text: `$QNT adesivo$NOUN_PLURAL com tamanho $HEIGHT cm por $WIDTH cm com impressão $IMPRESSAO em $MATERIAL com recorte
          fica$VERB_PLURAL no valor de *R$ $PRICE* tudo<br>
-        Conseguimos entregar para $MIN_DATE a $MAX_DATE dias úteis`
+         Conseguimos entregar dentro de $MIN_DATE a $MAX_DATE$DATE_COMPL`
     },
 };
 
 const text_class = "text";
 
 main_div = document.getElementsByClassName("main")[0];
+
+
+for(let product_key in MODELS) {
+    let product = MODELS[product_key]
+    let title = document.createElement('h2')
+    title.innerText = product['title'];
+
+    let output_text = document.createElement('p');
+    output_text.className = product_key + " " + text_class;
+    main_div.appendChild(output_text);
+
+
+    main_div.appendChild(title)
+    for(let input_key in product.input) {
+        createInput(product.input[input_key], main_div, product_key, input_key);
+    }
+    main_div.appendChild(output_text);
+    updateText(product_key);
+}
+
+
+
 
 function updateText(product_name) {
     const product = MODELS[product_name];
@@ -194,17 +232,18 @@ function updateText(product_name) {
             
             text = text.replaceAll("$" + input_key.toUpperCase(), String(subs_str));
         }
-        if(product_input.type === "number") {
-            let value = Number(document.getElementsByClassName(product_name + " " + input_key.toLowerCase())[0].value);
-
-            if(isNaN(value)) value = 1;
-
-            text= text.replaceAll("$" + input_key.toUpperCase(), String(value))
-        }
-        if(product_input.type === "text") {
+        if(product_input.type === "text" || product_input.type === "number") {
             let value = document.getElementsByClassName(product_name + " " + input_key.toLowerCase())[0].value;
 
             text= text.replaceAll("$" + input_key.toUpperCase(), value)
+        }
+        if(product_input.type === "radio") {
+            product_input.options.forEach((option) => {
+                let option_input = document.getElementById(product_name + "_" + option.name.replaceAll(" ", "_"));
+                if(option_input.checked === true) {
+                    text = text.replaceAll("$" + input_key.toUpperCase(), option.text);
+                }
+            });
         }
     }
     text_field.innerHTML = text;
@@ -218,9 +257,19 @@ function createInput(input_obj, div, product_name, input_name) {
     if(input_obj.type === "plural") return;
     if(input_obj.type === "number") {
         for(let attr in input_obj) {
-            form[attr] = input_obj[attr];
-            form.className = product_name + " " + input_name.toLowerCase();
+            if(attr === "type") {
+                form.type = "text"
+            } else {
+                form[attr] = input_obj[attr];
+            }
+            
         }
+        form.className = product_name + " " + input_name.toLowerCase();
+        form.addEventListener("keydown", (e) => {
+            if(e.key.match(/[a-z]/i) && e.key.length===1) {
+                e.preventDefault();
+            }
+        })
     }
     if(input_obj.type === "text") {
         for(let attr in input_obj) {
@@ -228,30 +277,35 @@ function createInput(input_obj, div, product_name, input_name) {
             form.className = product_name + " " + input_name.toLowerCase();
         }
     }
+    if(input_obj.type === "radio") {
+        form = document.createElement('div');
+        form.className = product_name + " " + input_name.toLowerCase();
+        let first = true;
+        input_obj.options.forEach((option) => {
+
+            let option_input = document.createElement('input');
+            let option_label = document.createElement('label');
+
+            option_input.type = "radio"
+            option_input.className = product_name + " " + input_name.toLowerCase();
+            option_input.name = product_name + "_" + input_obj.name.replaceAll(" ", "_");
+            option_input.id = product_name + "_" + option.name.replaceAll(" ", "_");
+            option_label.innerText = option.name;
+
+            if(first) {
+                first = false;
+                option_input.checked = true;
+            }
+
+            form.appendChild(option_input);
+            form.appendChild(option_label);
+        });
+    }
 
     form.addEventListener('change', () => {updateText(product_name)})
     form.addEventListener('keyup', () => {updateText(product_name)})
     form_paragraph.innerText = input_obj.name + ": ";
-    form_paragraph.appendChild(form)
+    form_paragraph.appendChild(form);
+    console.log(form)
     div.appendChild(form_paragraph);
-}
-
-
-
-for(let product_key in MODELS) {
-    let product = MODELS[product_key]
-    let title = document.createElement('h2')
-    title.innerText = product['title'];
-
-    let output_text = document.createElement('p');
-    output_text.className = product_key + " " + text_class;
-    main_div.appendChild(output_text);
-
-
-    main_div.appendChild(title)
-    for(let input_key in product.input) {
-        createInput(product.input[input_key], main_div, product_key, input_key);
-    }
-    main_div.appendChild(output_text);
-    updateText(product_key);
 }
