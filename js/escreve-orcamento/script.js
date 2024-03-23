@@ -1,3 +1,12 @@
+/*************************
+ * COISAS A FAZER: 
+ *     Adicionar o tipo checkbox e trocar impressão e material de adesivos com recorte
+ *     Adicionar proteções para números, seja com o tipo number, seja com o text, qual ficar melhor
+ *     Adicionar adesivo de vinil simples, impressão à jato de tinta em sulfite grande, impressões cartão e foto
+ *         com e sem corte, apostilas
+ */
+
+
 const MODELS = {
     banner: {
         input: {
@@ -34,7 +43,7 @@ const MODELS = {
                 value: "100,00"
             },
             MIN_DATE: {
-                name: "Mìnimo de prazo",
+                name: "Mínimo de prazo",
                 type: "text",
                 value: "1"
             },
@@ -47,7 +56,7 @@ const MODELS = {
         title: "Banner",
         text: `$QNT banner$S com tamanho $H cm por $L cm com impressão ecossolvente em lona e acabamento de madeira e cordão
          fica$M no valor de *R$ $PRICE* tudo<br>
-        Conseguimos entregar para um prazo de $MIN_DATE a $MAX_DATE dias úteis para a entrega`
+        Conseguimos entregar para um prazo de $MIN_DATE a $MAX_DATE dias úteis`
     },
     lona: {
         input: {
@@ -84,7 +93,7 @@ const MODELS = {
                 value: "100,00"
             },
             MIN_DATE: {
-                name: "Mìnimo de prazo",
+                name: "Mínimo de prazo",
                 type: "text",
                 value: "1"
             },
@@ -97,8 +106,68 @@ const MODELS = {
         title: "Lona",
         text: `$QNT lona$S com tamanho $H cm por $L cm com impressão ecossolvente em lona e acabamento de bainha e ilhós
          fica$M no valor de *R$ $PRICE* tudo<br>
-        Conseguimos entregar para um prazo de $MIN_DATE a $MAX_DATE dias úteis para a entrega`
-    }
+        Conseguimos entregar para um prazo de $MIN_DATE a $MAX_DATE dias úteis`
+    },
+    adesivo_recorte: {
+        input: {
+            QNT: {
+                name: "Quantidade",
+                type: "text",
+                value: "1" 
+            },
+            S: {
+                type: "plural",
+                depends: "QNT",
+                single: "",
+                plural: "s"
+            },
+            L: {
+                name: "Largura",
+                type: "text",
+                value: "5"
+            },
+            H: {
+                name: "Altura",
+                type: "text",
+                value: "5"
+            },
+            M: {
+                type: "plural",
+                depends: "QNT",
+                single: "",
+                plural: "m"
+            },
+            PRICE: {
+                name: "Preço",
+                type: "text",
+                value: "100,00"
+            },
+            MIN_DATE: {
+                name: "Mínimo de prazo",
+                type: "text",
+                value: "1"
+            },
+            MAX_DATE: {
+                name: "Máximo de prazo",
+                type: "text",
+                value: "3"
+            },
+            IMPRESSAO: { //create the checkbox input and change this input and MATERIAL to it
+                name: "Tipo de impressão",
+                type: "text",
+                value: "à laser"
+            },
+            MATERIAL: {
+                name: "Tipo de material",
+                type: "text",
+                value: "papel adesivo fosco"
+            }
+        },
+        title: "Adesivo de recorte",
+        text: `$QNT adesivo$S com tamanho $H cm por $L cm com impressão $IMPRESSAO em $MATERIAL com recorte
+         fica$M no valor de *R$ $PRICE* tudo<br>
+        Conseguimos entregar para um prazo de $MIN_DATE a $MAX_DATE dias úteis`
+    },
 };
 
 const text_class = "text";
