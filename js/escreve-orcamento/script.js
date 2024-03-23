@@ -4,6 +4,7 @@
  *     Adicionar proteções para números, seja com o tipo number, seja com o text, qual ficar melhor
  *     Adicionar adesivo de vinil simples, impressão à jato de tinta em sulfite grande, impressões cartão e foto
  *         com e sem corte, apostilas
+ *     Consertar problemas com as variáveis de letra única
  */
 
 
@@ -131,7 +132,7 @@ const MODELS = {
                 type: "text",
                 value: "5"
             },
-            M: {
+            MM: {
                 type: "plural",
                 depends: "QNT",
                 single: "",
@@ -165,7 +166,7 @@ const MODELS = {
         },
         title: "Adesivo de recorte",
         text: `$QNT adesivo$S com tamanho $H cm por $L cm com impressão $IMPRESSAO em $MATERIAL com recorte
-         fica$M no valor de *R$ $PRICE* tudo<br>
+         fica$MM no valor de *R$ $PRICE* tudo<br>
         Conseguimos entregar para um prazo de $MIN_DATE a $MAX_DATE dias úteis`
     },
 };
