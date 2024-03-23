@@ -4,7 +4,6 @@
  *     Adicionar proteções para números, seja com o tipo number, seja com o text, qual ficar melhor
  *     Adicionar adesivo de vinil simples, impressão à jato de tinta em sulfite grande, impressões cartão e foto
  *         com e sem corte, apostilas
- *     Consertar problemas com as variáveis de letra única
  */
 
 
@@ -16,23 +15,23 @@ const MODELS = {
                 type: "text",
                 value: "1" 
             },
-            S: {
+            NOUN_PLURAL: {
                 type: "plural",
                 depends: "QNT",
                 single: "",
                 plural: "s"
             },
-            L: {
+            WIDTH: {
                 name: "Largura",
                 type: "text",
                 value: "40"
             },
-            H: {
+            HEIGHT: {
                 name: "Altura",
                 type: "text",
                 value: "60"
             },
-            M: {
+            VERB_PLURAL: {
                 type: "plural",
                 depends: "QNT",
                 single: "",
@@ -55,8 +54,8 @@ const MODELS = {
             }
         },
         title: "Banner",
-        text: `$QNT banner$S com tamanho $H cm por $L cm com impressão ecossolvente em lona e acabamento de madeira e cordão
-         fica$M no valor de *R$ $PRICE* tudo<br>
+        text: `$QNT banner$NOUN_PLURAL com tamanho $HEIGHT cm por $WIDTH cm com impressão ecossolvente em lona e acabamento de madeira e cordão
+         fica$VERB_PLURAL no valor de *R$ $PRICE* tudo<br>
         Conseguimos entregar para um prazo de $MIN_DATE a $MAX_DATE dias úteis`
     },
     lona: {
@@ -66,23 +65,23 @@ const MODELS = {
                 type: "text",
                 value: "1" 
             },
-            S: {
+            NOUN_PLURAL: {
                 type: "plural",
                 depends: "QNT",
                 single: "",
                 plural: "s"
             },
-            L: {
+            WIDTH: {
                 name: "Largura",
                 type: "text",
                 value: "40"
             },
-            H: {
+            HEIGHT: {
                 name: "Altura",
                 type: "text",
                 value: "60"
             },
-            M: {
+            VERB_PLURAL: {
                 type: "plural",
                 depends: "QNT",
                 single: "",
@@ -105,9 +104,9 @@ const MODELS = {
             }
         },
         title: "Lona",
-        text: `$QNT lona$S com tamanho $H cm por $L cm com impressão ecossolvente em lona e acabamento de bainha e ilhós
-         fica$M no valor de *R$ $PRICE* tudo<br>
-        Conseguimos entregar para um prazo de $MIN_DATE a $MAX_DATE dias úteis`
+        text: `$QNT lona$NOUN_PLURAL com tamanho $HEIGHT cm por $WIDTH cm com impressão ecossolvente em lona e acabamento de bainha e ilhós
+         fica$VERB_PLURAL no valor de *R$ $PRICE* tudo<br>
+        Conseguimos entregar para $MIN_DATE a $MAX_DATE dias úteis`
     },
     adesivo_recorte: {
         input: {
@@ -116,23 +115,23 @@ const MODELS = {
                 type: "text",
                 value: "1" 
             },
-            S: {
+            NOUN_PLURAL: {
                 type: "plural",
                 depends: "QNT",
                 single: "",
                 plural: "s"
             },
-            L: {
+            WIDTH: {
                 name: "Largura",
                 type: "text",
                 value: "5"
             },
-            H: {
+            HEIGHT: {
                 name: "Altura",
                 type: "text",
                 value: "5"
             },
-            MM: {
+            VERB_PLURAL: {
                 type: "plural",
                 depends: "QNT",
                 single: "",
@@ -165,9 +164,9 @@ const MODELS = {
             }
         },
         title: "Adesivo de recorte",
-        text: `$QNT adesivo$S com tamanho $H cm por $L cm com impressão $IMPRESSAO em $MATERIAL com recorte
-         fica$MM no valor de *R$ $PRICE* tudo<br>
-        Conseguimos entregar para um prazo de $MIN_DATE a $MAX_DATE dias úteis`
+        text: `$QNT adesivo$NOUN_PLURAL com tamanho $HEIGHT cm por $WIDTH cm com impressão $IMPRESSAO em $MATERIAL com recorte
+         fica$VERB_PLURAL no valor de *R$ $PRICE* tudo<br>
+        Conseguimos entregar para $MIN_DATE a $MAX_DATE dias úteis`
     },
 };
 
@@ -181,7 +180,8 @@ function updateText(product_name) {
     let text = product.text;
 
     for(let input_key in product.input) {
-        if(product.input[input_key].type === "plural") {
+        let product_input = product.input[input_key]
+        if(product_input.type === "plural") {
 
             let cond_value = Number(document.getElementsByClassName(product_name + " " + 
                 product.input[input_key].depends.toLowerCase())[0].value);
@@ -192,22 +192,21 @@ function updateText(product_name) {
                 subs_str = product.input[input_key].plural;
             }
             
-            text = text.replace("$" + input_key.toUpperCase(), String(subs_str));
+            text = text.replaceAll("$" + input_key.toUpperCase(), String(subs_str));
         }
-        if(product.input[input_key].type === "number") {
+        if(product_input.type === "number") {
             let value = Number(document.getElementsByClassName(product_name + " " + input_key.toLowerCase())[0].value);
 
             if(isNaN(value)) value = 1;
 
-            text= text.replace("$" + input_key.toUpperCase(), String(value))
+            text= text.replaceAll("$" + input_key.toUpperCase(), String(value))
         }
-        if(product.input[input_key].type === "text") {
+        if(product_input.type === "text") {
             let value = document.getElementsByClassName(product_name + " " + input_key.toLowerCase())[0].value;
 
-            text= text.replace("$" + input_key.toUpperCase(), value)
+            text= text.replaceAll("$" + input_key.toUpperCase(), value)
         }
     }
-    console.log(text)
     text_field.innerHTML = text;
 }
 
@@ -231,6 +230,7 @@ function createInput(input_obj, div, product_name, input_name) {
     }
 
     form.addEventListener('change', () => {updateText(product_name)})
+    form.addEventListener('keyup', () => {updateText(product_name)})
     form_paragraph.innerText = input_obj.name + ": ";
     form_paragraph.appendChild(form)
     div.appendChild(form_paragraph);
