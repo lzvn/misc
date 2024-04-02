@@ -324,8 +324,8 @@ const MODELS = {
             NOUN_PLURAL: {
                 type: "plural",
                 depends: "QNT",
-                single: "",
-                plural: "s"
+                single: "ão",
+                plural: "ões"
             },
             HEIGHT: {
                 name: "Altura",
@@ -375,7 +375,7 @@ const MODELS = {
             }
         },
         title: "Cartão",
-        text: `$QNT cartões$NOUN_PLURAL com tamanho $HEIGHT cm por $WIDTH cm com impressão $IMPRESSAO em $MATERIAL com recorte
+        text: `$QNT cart$NOUN_PLURAL com tamanho $HEIGHT cm por $WIDTH cm com impressão $IMPRESSAO em $MATERIAL com recorte
          fica$VERB_PLURAL no valor de *R$ $PRICE* tudo<br>
          Conseguimos entregar dentro de $MIN_DATE a $MAX_DATE$DATE_COMPL`
     },
