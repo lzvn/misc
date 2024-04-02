@@ -22,15 +22,15 @@ const MODELS = {
                 single: "",
                 plural: "s"
             },
-            WIDTH: {
-                name: "Largura",
-                type: "number",
-                value: "40"
-            },
             HEIGHT: {
                 name: "Altura",
                 type: "number",
                 value: "60"
+            },
+            WIDTH: {
+                name: "Largura",
+                type: "number",
+                value: "40"
             },
             VERB_PLURAL: {
                 type: "plural",
@@ -77,15 +77,15 @@ const MODELS = {
                 single: "",
                 plural: "s"
             },
-            WIDTH: {
-                name: "Largura",
-                type: "number",
-                value: "40"
-            },
             HEIGHT: {
                 name: "Altura",
                 type: "number",
                 value: "60"
+            },
+            WIDTH: {
+                name: "Largura",
+                type: "number",
+                value: "40"
             },
             VERB_PLURAL: {
                 type: "plural",
@@ -132,13 +132,13 @@ const MODELS = {
                 single: "",
                 plural: "s"
             },
-            WIDTH: {
-                name: "Largura",
+            HEIGHT: {
+                name: "Altura",
                 type: "number",
                 value: "5"
             },
-            HEIGHT: {
-                name: "Altura",
+            WIDTH: {
+                name: "Largura",
                 type: "number",
                 value: "5"
             },
@@ -148,7 +148,7 @@ const MODELS = {
                 single: "",
                 plural: "m"
             },
-            IMPRESSAO: { //create the checkbox input and change this input and MATERIAL to it
+            IMPRESSAO: {
                 name: "Tipo de impressão",
                 type: "radio",
                 options: [{name: "Laser", text: "à laser"}, {name: "Ecossolvente", text: "ecossolvente"}]
@@ -181,6 +181,201 @@ const MODELS = {
         },
         title: "Adesivo de recorte",
         text: `$QNT adesivo$NOUN_PLURAL com tamanho $HEIGHT cm por $WIDTH cm com impressão $IMPRESSAO em $MATERIAL com recorte
+         fica$VERB_PLURAL no valor de *R$ $PRICE* tudo<br>
+         Conseguimos entregar dentro de $MIN_DATE a $MAX_DATE$DATE_COMPL`
+    },
+    adesivo: {
+        input: {
+            QNT: {
+                name: "Quantidade",
+                type: "number",
+                value: "1" 
+            },
+            NOUN_PLURAL: {
+                type: "plural",
+                depends: "QNT",
+                single: "",
+                plural: "s"
+            },
+            HEIGHT: {
+                name: "Altura",
+                type: "number",
+                value: "60"
+            },
+            WIDTH: {
+                name: "Largura",
+                type: "number",
+                value: "60"
+            },
+            VERB_PLURAL: {
+                type: "plural",
+                depends: "QNT",
+                single: "",
+                plural: "m"
+            },
+            IMPRESSAO: {
+                name: "Tipo de impressão",
+                type: "radio",
+                options: [{name: "Ecossolvente", text: "ecossolvente"}, {name: "Laser", text: "à laser"}]
+            },
+            MATERIAL: {
+                name: "Tipo de material",
+                type: "radio",
+                options: [{name: "Vinil", text: "vinil adesivo"}, {name: "Papel adesivo fosco", text: "folha de papel adesivo fosco"}]
+            },
+            PRICE: {
+                name: "Preço",
+                type: "number",
+                value: "100,00"
+            },
+            MIN_DATE: {
+                name: "Mínimo de prazo",
+                type: "text",
+                value: "1"
+            },
+            MAX_DATE: {
+                name: "Máximo de prazo",
+                type: "text",
+                value: "3"
+            },
+            DATE_COMPL: {
+                name: "Tipo de data",
+                type: "radio",
+                options: [{name: "Dias Úteis", text: " dias úteis"}, {name: "Data fixa", text: ""}]
+            }
+        },
+        title: "Adesivo simples",
+        text: `$QNT adesivo$NOUN_PLURAL com tamanho $HEIGHT cm por $WIDTH cm com impressão $IMPRESSAO em $MATERIAL
+         fica$VERB_PLURAL no valor de *R$ $PRICE* tudo<br>
+         Conseguimos entregar dentro de $MIN_DATE a $MAX_DATE$DATE_COMPL`
+    },
+    tag: {
+        input: {
+            QNT: {
+                name: "Quantidade",
+                type: "number",
+                value: "1" 
+            },
+            NOUN_PLURAL: {
+                type: "plural",
+                depends: "QNT",
+                single: "",
+                plural: "s"
+            },
+            HEIGHT: {
+                name: "Altura",
+                type: "number",
+                value: "5"
+            },
+            WIDTH: {
+                name: "Largura",
+                type: "number",
+                value: "5"
+            },
+            VERB_PLURAL: {
+                type: "plural",
+                depends: "QNT",
+                single: "",
+                plural: "m"
+            },
+            IMPRESSAO: {
+                name: "Tipo de impressão",
+                type: "radio",
+                options: [{name: "Laser", text: "à laser"}, {name: "Jato de tinta", text: "à jato de tinta"}]
+            },
+            MATERIAL: {
+                name: "Tipo de material",
+                type: "radio",
+                options: [{name: "Papel couchê 300gr", text: "papel couchê 300gr"}, {name: "Papel cartão", text: "papel cartão"}, {name: "Papel matte", text: "papel matte"}]
+            },
+            PRICE: {
+                name: "Preço",
+                type: "number",
+                value: "100,00"
+            },
+            MIN_DATE: {
+                name: "Mínimo de prazo",
+                type: "text",
+                value: "1"
+            },
+            MAX_DATE: {
+                name: "Máximo de prazo",
+                type: "text",
+                value: "3"
+            },
+            DATE_COMPL: {
+                name: "Tipo de data",
+                type: "radio",
+                options: [{name: "Dias Úteis", text: " dias úteis"}, {name: "Data fixa", text: ""}]
+            }
+        },
+        title: "Tag",
+        text: `$QNT tag$NOUN_PLURAL com tamanho $HEIGHT cm por $WIDTH cm com impressão $IMPRESSAO em $MATERIAL com recorte
+         fica$VERB_PLURAL no valor de *R$ $PRICE* tudo<br>
+         Conseguimos entregar dentro de $MIN_DATE a $MAX_DATE$DATE_COMPL`
+    },
+    cartao: {
+        input: {
+            QNT: {
+                name: "Quantidade",
+                type: "number",
+                value: "1" 
+            },
+            NOUN_PLURAL: {
+                type: "plural",
+                depends: "QNT",
+                single: "",
+                plural: "s"
+            },
+            HEIGHT: {
+                name: "Altura",
+                type: "number",
+                value: "5"
+            },
+            WIDTH: {
+                name: "Largura",
+                type: "number",
+                value: "5"
+            },
+            VERB_PLURAL: {
+                type: "plural",
+                depends: "QNT",
+                single: "",
+                plural: "m"
+            },
+            IMPRESSAO: {
+                name: "Tipo de impressão",
+                type: "radio",
+                options: [{name: "Laser", text: "à laser"}, {name: "Jato de tinta", text: "à jato de tinta"}]
+            },
+            MATERIAL: {
+                name: "Tipo de material",
+                type: "radio",
+                options: [{name: "Papel couchê 300gr", text: "papel couchê 300gr"}, {name: "Papel cartão", text: "papel cartão"}, {name: "Papel matte", text: "papel matte"}]
+            },
+            PRICE: {
+                name: "Preço",
+                type: "number",
+                value: "100,00"
+            },
+            MIN_DATE: {
+                name: "Mínimo de prazo",
+                type: "text",
+                value: "1"
+            },
+            MAX_DATE: {
+                name: "Máximo de prazo",
+                type: "text",
+                value: "3"
+            },
+            DATE_COMPL: {
+                name: "Tipo de data",
+                type: "radio",
+                options: [{name: "Dias Úteis", text: " dias úteis"}, {name: "Data fixa", text: ""}]
+            }
+        },
+        title: "Cartão",
+        text: `$QNT cartões$NOUN_PLURAL com tamanho $HEIGHT cm por $WIDTH cm com impressão $IMPRESSAO em $MATERIAL com recorte
          fica$VERB_PLURAL no valor de *R$ $PRICE* tudo<br>
          Conseguimos entregar dentro de $MIN_DATE a $MAX_DATE$DATE_COMPL`
     },
