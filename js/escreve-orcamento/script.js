@@ -43,6 +43,11 @@ const MODELS = {
                 type: "number",
                 value: "100,00"
             },
+            DATE_COMPL: {
+                name: "Tipo de data",
+                type: "radio",
+                options: [{name: "Dias Úteis", text: "em um prazo de $MIN_DATE a $MAX_DATE dias úteis"}, {name: "Data fixa", text: "para $MIN_DATE ou, no mais tardar, $MAX_DATE"}]
+            },
             MIN_DATE: {
                 name: "Mínimo de prazo",
                 type: "text",
@@ -52,17 +57,12 @@ const MODELS = {
                 name: "Máximo de prazo",
                 type: "text",
                 value: "3"
-            },
-            DATE_COMPL: {
-                name: "Tipo de data",
-                type: "radio",
-                options: [{name: "Dias Úteis", text: " dias úteis"}, {name: "Data fixa", text: ""}]
             }
         },
         title: "Banner",
         text: `$QNT banner$NOUN_PLURAL com tamanho $HEIGHT cm por $WIDTH cm com impressão ecossolvente em lona e acabamento de madeira e cordão
          fica$VERB_PLURAL no valor de *R$ $PRICE* tudo<br>
-        Conseguimos entregar dentro de $MIN_DATE a $MAX_DATE$DATE_COMPL`
+        Conseguimos entregar $DATE_COMPL`
     },
     lona: {
         input: {
@@ -98,6 +98,11 @@ const MODELS = {
                 type: "number",
                 value: "100,00"
             },
+            DATE_COMPL: {
+                name: "Tipo de data",
+                type: "radio",
+                options: [{name: "Dias Úteis", text: "em um prazo de $MIN_DATE a $MAX_DATE dias úteis"}, {name: "Data fixa", text: "para $MIN_DATE ou, no mais tardar, $MAX_DATE"}]
+            },
             MIN_DATE: {
                 name: "Mínimo de prazo",
                 type: "text",
@@ -107,17 +112,77 @@ const MODELS = {
                 name: "Máximo de prazo",
                 type: "text",
                 value: "3"
-            },
-            DATE_COMPL: {
-                name: "Tipo de data",
-                type: "radio",
-                options: [{name: "Dias Úteis", text: " dias úteis"}, {name: "Data fixa", text: ""}]
             }
         },
         title: "Lona",
         text: `$QNT lona$NOUN_PLURAL com tamanho $HEIGHT cm por $WIDTH cm com impressão ecossolvente em lona e acabamento de bainha e ilhós
          fica$VERB_PLURAL no valor de *R$ $PRICE* tudo<br>
-         Conseguimos entregar dentro de $MIN_DATE a $MAX_DATE$DATE_COMPL`
+         Conseguimos entregar $DATE_COMPL`
+    },
+    placa: {
+        input: {
+            QNT: {
+                name: "Quantidade",
+                type: "number",
+                value: "1" 
+            },
+            NOUN_PLURAL: {
+                type: "plural",
+                depends: "QNT",
+                single: "",
+                plural: "s"
+            },
+            HEIGHT: {
+                name: "Altura",
+                type: "number",
+                value: "60"
+            },
+            WIDTH: {
+                name: "Largura",
+                type: "number",
+                value: "40"
+            },
+            VERB_PLURAL: {
+                type: "plural",
+                depends: "QNT",
+                single: "",
+                plural: "m"
+            },
+            MATERIAL: {
+                name: "Material",
+                type: "radio",
+                options: [{name: "PVC", text: "PVC"}, {name: "PS", text: "PS"}, {name: "Polionda", text: "polionda"}]
+            },
+            THICK: {
+                name: "Espessura",
+                type: "number",
+                value: "2"
+            },
+            PRICE: {
+                name: "Preço",
+                type: "number",
+                value: "100,00"
+            },
+            DATE_COMPL: {
+                name: "Tipo de data",
+                type: "radio",
+                options: [{name: "Dias Úteis", text: "em um prazo de $MIN_DATE a $MAX_DATE dias úteis"}, {name: "Data fixa", text: "para $MIN_DATE ou, no mais tardar, $MAX_DATE"}]
+            },
+            MIN_DATE: {
+                name: "Mínimo de prazo",
+                type: "text",
+                value: "1"
+            },
+            MAX_DATE: {
+                name: "Máximo de prazo",
+                type: "text",
+                value: "3"
+            }
+        },
+        title: "Placa",
+        text: `$QNT placa$NOUN_PLURAL com tamanho $HEIGHT cm por $WIDTH cm com impressão ecossolvente em adesivo vinil aplicado
+         em chapa de $MATERIAL $THICK mm fica$VERB_PLURAL no valor de *R$ $PRICE* tudo<br>
+         Conseguimos entregar $DATE_COMPL`
     },
     adesivo_recorte: {
         input: {
@@ -163,6 +228,11 @@ const MODELS = {
                 type: "number",
                 value: "100,00"
             },
+            DATE_COMPL: {
+                name: "Tipo de data",
+                type: "radio",
+                options: [{name: "Dias Úteis", text: "em um prazo de $MIN_DATE a $MAX_DATE dias úteis"}, {name: "Data fixa", text: "para $MIN_DATE ou, no mais tardar, $MAX_DATE"}]
+            },
             MIN_DATE: {
                 name: "Mínimo de prazo",
                 type: "text",
@@ -172,17 +242,12 @@ const MODELS = {
                 name: "Máximo de prazo",
                 type: "text",
                 value: "3"
-            },
-            DATE_COMPL: {
-                name: "Tipo de data",
-                type: "radio",
-                options: [{name: "Dias Úteis", text: " dias úteis"}, {name: "Data fixa", text: ""}]
             }
         },
-        title: "Adesivo de recorte",
+        title: "Adesivo impresso com recorte",
         text: `$QNT adesivo$NOUN_PLURAL com tamanho $HEIGHT cm por $WIDTH cm com impressão $IMPRESSAO em $MATERIAL com recorte
          fica$VERB_PLURAL no valor de *R$ $PRICE* tudo<br>
-         Conseguimos entregar dentro de $MIN_DATE a $MAX_DATE$DATE_COMPL`
+         Conseguimos entregar $DATE_COMPL`
     },
     adesivo: {
         input: {
@@ -221,12 +286,17 @@ const MODELS = {
             MATERIAL: {
                 name: "Tipo de material",
                 type: "radio",
-                options: [{name: "Vinil", text: "vinil adesivo"}, {name: "Papel adesivo fosco", text: "folha de papel adesivo fosco"}]
+                options: [{name: "Vinil", text: "vinil adesivo"}, {name: "Vinil perfurado", text: "vinil adesivo perfurado"}, {name: "Papel adesivo fosco", text: "folha de papel adesivo fosco"}]
             },
             PRICE: {
                 name: "Preço",
                 type: "number",
                 value: "100,00"
+            },
+            DATE_COMPL: {
+                name: "Tipo de data",
+                type: "radio",
+                options: [{name: "Dias Úteis", text: "em um prazo de $MIN_DATE a $MAX_DATE dias úteis"}, {name: "Data fixa", text: "para $MIN_DATE ou, no mais tardar, $MAX_DATE"}]
             },
             MIN_DATE: {
                 name: "Mínimo de prazo",
@@ -237,17 +307,12 @@ const MODELS = {
                 name: "Máximo de prazo",
                 type: "text",
                 value: "3"
-            },
-            DATE_COMPL: {
-                name: "Tipo de data",
-                type: "radio",
-                options: [{name: "Dias Úteis", text: " dias úteis"}, {name: "Data fixa", text: ""}]
             }
         },
         title: "Adesivo simples",
         text: `$QNT adesivo$NOUN_PLURAL com tamanho $HEIGHT cm por $WIDTH cm com impressão $IMPRESSAO em $MATERIAL
          fica$VERB_PLURAL no valor de *R$ $PRICE* tudo<br>
-         Conseguimos entregar dentro de $MIN_DATE a $MAX_DATE$DATE_COMPL`
+         Conseguimos entregar $DATE_COMPL`
     },
     tag: {
         input: {
@@ -293,6 +358,11 @@ const MODELS = {
                 type: "number",
                 value: "100,00"
             },
+            DATE_COMPL: {
+                name: "Tipo de data",
+                type: "radio",
+                options: [{name: "Dias Úteis", text: "em um prazo de $MIN_DATE a $MAX_DATE dias úteis"}, {name: "Data fixa", text: "para $MIN_DATE ou, no mais tardar, $MAX_DATE"}]
+            },
             MIN_DATE: {
                 name: "Mínimo de prazo",
                 type: "text",
@@ -302,17 +372,12 @@ const MODELS = {
                 name: "Máximo de prazo",
                 type: "text",
                 value: "3"
-            },
-            DATE_COMPL: {
-                name: "Tipo de data",
-                type: "radio",
-                options: [{name: "Dias Úteis", text: " dias úteis"}, {name: "Data fixa", text: ""}]
             }
         },
         title: "Tag",
         text: `$QNT tag$NOUN_PLURAL com tamanho $HEIGHT cm por $WIDTH cm com impressão $IMPRESSAO em $MATERIAL com recorte
          fica$VERB_PLURAL no valor de *R$ $PRICE* tudo<br>
-         Conseguimos entregar dentro de $MIN_DATE a $MAX_DATE$DATE_COMPL`
+         Conseguimos entregar $DATE_COMPL`
     },
     cartao: {
         input: {
@@ -358,6 +423,11 @@ const MODELS = {
                 type: "number",
                 value: "100,00"
             },
+            DATE_COMPL: {
+                name: "Tipo de data",
+                type: "radio",
+                options: [{name: "Dias Úteis", text: "em um prazo de $MIN_DATE a $MAX_DATE dias úteis"}, {name: "Data fixa", text: "para $MIN_DATE ou, no mais tardar, $MAX_DATE"}]
+            },
             MIN_DATE: {
                 name: "Mínimo de prazo",
                 type: "text",
@@ -367,17 +437,12 @@ const MODELS = {
                 name: "Máximo de prazo",
                 type: "text",
                 value: "3"
-            },
-            DATE_COMPL: {
-                name: "Tipo de data",
-                type: "radio",
-                options: [{name: "Dias Úteis", text: " dias úteis"}, {name: "Data fixa", text: ""}]
             }
         },
         title: "Cartão",
         text: `$QNT cart$NOUN_PLURAL com tamanho $HEIGHT cm por $WIDTH cm com impressão $IMPRESSAO em $MATERIAL com recorte
          fica$VERB_PLURAL no valor de *R$ $PRICE* tudo<br>
-         Conseguimos entregar dentro de $MIN_DATE a $MAX_DATE$DATE_COMPL`
+         Conseguimos entregar $DATE_COMPL`
     },
 };
 
