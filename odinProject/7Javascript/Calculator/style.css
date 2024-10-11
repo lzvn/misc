@@ -1,0 +1,21 @@
+button {
+    width: 1cm;
+    height: 1cm;
+}
+
+.zero {
+    width: 2cm;
+}
+
+.calc {
+    width: 3cm;
+}
+
+.row {
+    display: flex;
+    margin: 5px 5px 5px 5px;
+}
+
+span {
+    font-size: xx-large;
+}

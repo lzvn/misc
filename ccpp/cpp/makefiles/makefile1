@@ -1,0 +1,15 @@
+#first try, no variables
+
+all: hello
+
+hello: main.o hello.o
+	gcc -o hello main.o hello.o
+
+main.o: main.cpp hello.h
+	gcc -o main.o main.cpp -c -W -Wall -ansi -pedantic
+
+hello.o: hello.cpp hello.h
+	gcc -o hello.o hello.cpp -c -W -Wall -ansi -pedantic
+
+clean: 
+	rm -rf *.o *~ hello
