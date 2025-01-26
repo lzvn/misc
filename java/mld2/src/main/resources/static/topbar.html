@@ -1,0 +1,27 @@
+<header>
+    <div class="main-title">
+		<a href="/" class="main-logo">
+			<h1>MLD</h1>
+			<h2>- Movies lists and discussions</h2>
+		</a>
+    </div>
+    <form action="/search" method="get" class="search">
+        <select id="search-params" name="param">
+            <option value="title">Title</option>
+            <option value="director">Director</option>
+            <option value="genre">Genre</option>
+            <option value="duration">Duration</option>
+            <option value="year">Year</option>
+            <option value="synopsis">Synopsis</option>
+        </select>
+        <input id="search-q" name="q" type="text" placeholder="Search movies, authors, etc"/>
+        <button id="search-btn"></button>
+    </form>
+    <nav>
+        <a href="/">Home</a>
+        <a href="#">Forum</a>
+        <a href="#">Sign Up</a>
+        <a href="#">Log In</a>
+        <a href="#">About</a>
+    </nav>
+</header>
